@@ -77,34 +77,68 @@
   .result-value { font-family: var(--serif); font-size: 1.7rem; font-variant-numeric: tabular-nums; }
   .tip { position: absolute; pointer-events: none; z-index: 20; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,.15); padding: 6px 10px; font-size: 12px; max-width: 16rem; line-height: 1.4; }
   .tip .k { color: var(--muted); }
-  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); margin-bottom: 14px; }
-  .legend span { display: inline-flex; align-items: center; gap: 5px; }
-  .sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  /* Etiquetas compartidas: país, red social, estado */
+  .tag { --c: var(--muted); display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; line-height: 1.5; padding: 1px 8px; border-radius: 999px; white-space: nowrap; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); }
+  .tag-dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
+  .tag-muted { --c: var(--muted); font-weight: 500; }
+  .tag-late { --c: var(--red); }
+  .net { --c: var(--muted); width: 20px; height: 20px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 8.5px; font-weight: 800; letter-spacing: .02em; color: #fff; background: var(--c); flex: none; }
+  .nets { display: inline-flex; flex-wrap: wrap; gap: 3px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+  /* Calendario */
+  .cal-tools { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button { font: inherit; font-size: 13px; border: 0; background: var(--field); color: var(--muted); padding: 6px 12px; cursor: pointer; }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
   .sw-late { box-shadow: inset 0 0 0 1.5px var(--red); }
+  .legend-nets { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .legend-nets span { display: inline-flex; align-items: center; gap: 5px; }
+  .legend-nets .net { width: 16px; height: 16px; font-size: 7px; }
   .cal { position: relative; }
-  .month { margin-bottom: 22px; }
-  .month-name { font-weight: 600; margin: 0 0 8px; text-transform: capitalize; }
-  .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
-  .dow { font-size: 11px; color: var(--muted); text-align: center; }
-  .day { min-height: 5.6rem; border: 1px solid var(--line); border-radius: 8px; padding: 4px; display: flex; flex-direction: column; gap: 3px; background: var(--field); min-width: 0; }
-  .day.out { opacity: .35; } .day.today { border-color: var(--indigo); box-shadow: inset 0 0 0 1px var(--indigo); }
-  .num { font-size: 11px; color: var(--muted); }
-  .chip { font-size: 11px; line-height: 1.25; padding: 2px 4px; border-radius: 4px; border-left: 3px solid var(--st-sin); background: var(--soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .chip.late { box-shadow: inset 0 0 0 1px var(--red); }
-  .agenda-day { padding: 6px 0; border-bottom: 1px solid var(--line); }
-  .agenda-date { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-  .agenda-day .chip { white-space: normal; margin-bottom: 3px; font-size: 12px; }
+  .month { margin-bottom: 28px; }
+  .month-name { font-weight: 600; font-size: 1.05rem; margin: 0 0 10px; text-transform: capitalize; }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+  .dow { font-size: 11px; font-weight: 600; color: var(--muted); text-align: center; text-transform: uppercase; letter-spacing: .06em; padding-bottom: 2px; }
+  .day { min-height: 7.5rem; border: 1px solid var(--line); border-radius: 10px; padding: 6px; display: flex; flex-direction: column; gap: 6px; background: var(--field); min-width: 0; }
+  .day.out { opacity: .3; } .day.today { border-color: var(--indigo); box-shadow: inset 0 0 0 1px var(--indigo); }
+  .day.weekend { background: color-mix(in srgb, var(--field) 70%, var(--soft)); }
+  .num { font-size: 12px; font-weight: 600; color: var(--muted); }
+  .day.today .num { color: var(--indigo); }
+  .ev { --c: var(--st-sin); background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--c); border-radius: 7px; padding: 5px 6px; display: flex; flex-direction: column; gap: 4px; cursor: default; min-width: 0; }
+  .ev:hover { box-shadow: 0 2px 8px rgba(16,24,40,.1); }
+  .ev.late { border-color: color-mix(in srgb, var(--red) 55%, var(--line)); border-left-color: var(--c); }
+  .ev-t { font-size: 12px; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; word-break: break-word; }
+  .ev-m { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; }
+  .ev .tag { font-size: 9.5px; padding: 0 6px; }
+  .ev .net { width: 16px; height: 16px; font-size: 7px; }
+  .agenda-day { padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+  .agenda-date { font-size: 12px; font-weight: 600; color: var(--muted); }
+  .agenda-day .ev-t { -webkit-line-clamp: unset; font-size: 13px; }
   .table-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
   .table-tools input { flex: 0 1 20rem; min-width: 0; }
-  .table-box { max-height: 32rem; overflow: auto; border: 1px solid var(--line); border-radius: 8px; }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  th { position: sticky; top: 0; background: var(--panel); text-align: left; border-bottom: 1px solid var(--line); padding: 0; z-index: 1; }
-  th button { all: unset; cursor: pointer; display: block; padding: 8px 10px; font-weight: 600; white-space: nowrap; }
-  th[aria-sort=ascending] button::after { content: " ▲"; font-size: 9px; } th[aria-sort=descending] button::after { content: " ▼"; font-size: 9px; }
-  td { padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .table-box { max-height: 36rem; overflow: auto; border: 1px solid var(--line); border-radius: 10px; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+  th { position: sticky; top: 0; background: var(--field); text-align: left; border-bottom: 1px solid var(--line); padding: 0; z-index: 1; }
+  th button { all: unset; cursor: pointer; display: block; padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  th button:hover { color: var(--fg); }
+  th[aria-sort] button { color: var(--fg); }
+  th[aria-sort=ascending] button::after { content: " ▲"; font-size: 8px; } th[aria-sort=descending] button::after { content: " ▼"; font-size: 8px; }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: 0; }
   tbody tr:hover td { background: var(--field); }
-  td a { color: inherit; font-weight: 600; text-decoration: none; } td a:hover { text-decoration: underline; }
-  .late-cell { color: var(--red); font-weight: 600; } .ok-cell { color: var(--green); font-weight: 600; }
+  tbody tr.row-late td:first-child { box-shadow: inset 3px 0 0 var(--red); }
+  .p-name { font-weight: 600; font-size: 13.5px; line-height: 1.3; }
+  .p-name a { color: inherit; text-decoration: none; } .p-name a:hover { color: var(--indigo); text-decoration: underline; }
+  :root[data-theme="dark"] .p-name a:hover { color: #8f8ff0; }
+  .p-sub { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+  .d-main { font-weight: 600; white-space: nowrap; }
+  .d-sub { margin-top: 4px; }
+  .muted { color: var(--muted); }
   .msg { padding: 40px 20px; text-align: center; color: var(--muted); }
   footer { text-align: center; font-size: 12px; color: var(--muted); }
   @media (max-width: 720px) { .col-hide { display: none; } .kpi-value { font-size: 1.9rem; } h1 { font-size: 1.35rem; } }
@@ -174,16 +208,15 @@
 
   <h2>Calendario editorial</h2>
   <article class="card">
-    <div class="legend">
-      <span><i class="sw" style="background:var(--st-idea)"></i>Idea</span>
-      <span><i class="sw" style="background:var(--st-grabar)"></i>Por grabar</span>
-      <span><i class="sw" style="background:var(--st-editar)"></i>Por editar</span>
-      <span><i class="sw" style="background:var(--st-correccion)"></i>En corrección</span>
-      <span><i class="sw" style="background:var(--st-publicar)"></i>Por publicar</span>
-      <span><i class="sw" style="background:var(--st-publicado)"></i>Publicado</span>
-      <span><i class="sw sw-late"></i>Atrasada</span>
+    <div class="cal-tools">
+      <div class="legend" id="c-leg"></div>
+      <div class="seg" role="group" aria-label="Color del calendario">
+        <button type="button" data-color="estado" aria-pressed="true">Color por estado</button>
+        <button type="button" data-color="pais" aria-pressed="false">Color por país</button>
+      </div>
     </div>
     <div class="cal" id="c-cal"></div>
+    <div class="legend-nets" id="c-nets"></div>
   </article>
 
   <h2>Detalle de piezas</h2>
@@ -199,7 +232,6 @@
           <th data-col="fecha" aria-sort="ascending"><button type="button">Fecha</button></th>
           <th data-col="estado"><button type="button">Estado</button></th>
           <th data-col="pais"><button type="button">País</button></th>
-          <th data-col="marca" class="col-hide"><button type="button">Marca / cuenta</button></th>
           <th data-col="redesTxt" class="col-hide"><button type="button">Redes</button></th>
           <th data-col="formato" class="col-hide"><button type="button">Formato</button></th>
           <th data-col="categoriasTxt" class="col-hide"><button type="button">Categoría</button></th>
@@ -394,9 +426,39 @@
     renderTabla(rows);
   };
 
+  // Etiquetas visuales de país, red y estado
+  const PAIS_INFO = { 'Colombia': ['CO', '#e8960c'], 'Ecuador': ['EC', '#1f9ad6'], 'México': ['MX', '#1f9d6b'], 'USA': ['US', '#3434c0'], 'Sin país': ['Sin país', '#8a8f98'] };
+  const RED_INFO = { 'Instagram': ['IG', '#d6249f'], 'TikTok': ['TT', '#25282e'], 'Facebook': ['FB', '#1877f2'], 'YouTube': ['YT', '#e62117'], 'LinkedIn': ['IN', '#0a66c2'] };
+  const tagPais = (p, corto) => { const [cod, col] = PAIS_INFO[p] || [p, '#8a8f98']; const t = el('span', 'tag', corto ? cod : p); t.style.setProperty('--c', col); t.title = p; return t; };
+  const tagEstado = (e) => { const t = el('span', 'tag tag-dot', e); t.style.setProperty('--c', COLOR_ESTADO[e] || 'var(--st-sin)'); return t; };
+  const netsDe = (redes) => {
+    const box = el('span', 'nets');
+    const orden = Object.keys(RED_INFO);
+    for (const r of [...redes].sort((a, b) => (orden.indexOf(a) + 1 || 99) - (orden.indexOf(b) + 1 || 99))) { const [cod, col] = RED_INFO[r] || [r.slice(0, 2).toUpperCase(), '#8a8f98']; const n = el('span', 'net', cod); n.style.setProperty('--c', col); n.title = r; box.appendChild(n); }
+    return box;
+  };
+  let colorCal = 'estado';
+  try { colorCal = localStorage.getItem('parrilla-color-cal') || 'estado'; } catch (e) {}
+  const colorEvento = (r) => (colorCal === 'pais' ? (PAIS_INFO[r.paisesN[0]] || [, '#8a8f98'])[1] : COLOR_ESTADO[r.estado] || 'var(--st-sin)');
+
+  const renderLeyenda = (piezas) => {
+    const leg = $('c-leg');
+    const item = (color, texto, late) => { const s = el('span'); const sw = el('i', 'sw' + (late ? ' sw-late' : '')); if (color) sw.style.background = color; s.append(sw, texto); return s; };
+    if (colorCal === 'pais') {
+      const ps = Object.keys(PAIS_INFO).filter((p) => piezas.some((r) => r.paisesN.includes(p)));
+      leg.replaceChildren(...ps.map((p) => item(PAIS_INFO[p][1], p)), item(null, 'Atrasada', true));
+    } else {
+      leg.replaceChildren(...ORDEN_ESTADOS.filter((e) => e !== 'Sin estado' || piezas.some((r) => r.estado === e)).map((e) => item(COLOR_ESTADO[e], e)), item(null, 'Atrasada', true));
+    }
+    for (const b of document.querySelectorAll('.seg button')) b.setAttribute('aria-pressed', String(b.dataset.color === colorCal));
+    const redes = Object.keys(RED_INFO).filter((r) => piezas.some((x) => x.redes.includes(r)));
+    $('c-nets').replaceChildren(...redes.map((r) => { const s = el('span'); s.append(netsDe([r]), r); return s; }));
+  };
+
   const renderCalendario = (rows) => {
     const host = $('c-cal');
     const piezas = rows.filter((r) => r.fecha);
+    renderLeyenda(piezas);
     if (!piezas.length) {
       host.replaceChildren(el('p', 'note', estado.filtro.mes === 'sin_fecha' ? 'Las piezas sin fecha no se muestran en el calendario: aparecen en el detalle.' : 'No hay piezas programadas para este filtro.'));
       return;
@@ -405,18 +467,23 @@
     const porDia = new Map();
     for (const r of piezas) { if (!porDia.has(r.fecha)) porDia.set(r.fecha, []); porDia.get(r.fecha).push(r); }
     const chip = (r) => {
-      const ch = el('div', 'chip' + (r.atrasada ? ' late' : ''), r.pieza);
-      ch.style.borderLeftColor = COLOR_ESTADO[r.estado] || 'var(--st-sin)';
-      ch.addEventListener('mousemove', (e) => tt.show(e, [fechaLarga(r.fecha), r.pieza, 'Estado: ' + r.estado + (r.atrasada ? ' (atrasada)' : ''), 'País: ' + r.pais, 'Formato: ' + r.formato, 'Redes: ' + r.redesTxt]));
+      const ch = el('div', 'ev' + (r.atrasada ? ' late' : ''));
+      ch.style.setProperty('--c', colorEvento(r));
+      const meta = el('div', 'ev-m');
+      for (const p of r.paisesN) meta.appendChild(tagPais(p, true));
+      meta.appendChild(netsDe(r.redes));
+      if (r.atrasada) meta.appendChild(el('span', 'tag tag-late', 'Atrasada'));
+      ch.append(el('div', 'ev-t', r.pieza), meta);
+      ch.addEventListener('mousemove', (e) => tt.show(e, [fechaLarga(r.fecha), r.pieza, 'Estado: ' + r.estado + (r.atrasada ? ' (atrasada)' : ''), 'País: ' + r.pais, 'Marca: ' + r.marca, 'Formato: ' + r.formato, 'Redes: ' + r.redesTxt, 'Categoría: ' + r.categoriasTxt]));
       ch.addEventListener('mouseleave', tt.hide);
       return ch;
     };
     const nodos = [];
-    if (host.clientWidth < 640) {
+    if (host.clientWidth < 860) {
       for (const f of [...porDia.keys()].sort()) {
         const d = new Date(f + 'T12:00:00Z');
         const dia = el('div', 'agenda-day');
-        dia.append(el('div', 'agenda-date', DIAS[d.getUTCDay()] + ' ' + fechaLarga(f) + (f === estado.hoy ? ' · hoy' : '')), ...porDia.get(f).map(chip));
+        dia.append(el('div', 'agenda-date', DIAS[d.getUTCDay()][0].toUpperCase() + DIAS[d.getUTCDay()].slice(1) + ' ' + fechaLarga(f) + (f === estado.hoy ? ' · hoy' : '')), ...porDia.get(f).map(chip));
         nodos.push(dia);
       }
     } else {
@@ -432,7 +499,8 @@
         while (iso <= fin) {
           const d = new Date(iso + 'T12:00:00Z');
           const dentro = d.getUTCMonth() === mm - 1;
-          const cell = el('div', 'day' + (dentro ? '' : ' out') + (iso === estado.hoy ? ' today' : ''));
+          const finde = d.getUTCDay() === 0 || d.getUTCDay() === 6;
+          const cell = el('div', 'day' + (dentro ? '' : ' out') + (finde ? ' weekend' : '') + (iso === estado.hoy ? ' today' : ''));
           cell.appendChild(el('span', 'num', d.getUTCDate()));
           if (dentro) for (const r of porDia.get(iso) || []) cell.appendChild(chip(r));
           grid.appendChild(cell);
@@ -445,10 +513,11 @@
     host.replaceChildren(...nodos);
   };
 
-  const COLS = ['pieza', 'fecha', 'estado', 'pais', 'marca', 'redesTxt', 'formato', 'categoriasTxt'];
+  const COLS = ['pieza', 'fecha', 'estado', 'pais', 'redesTxt', 'formato', 'categoriasTxt'];
+  const BUSCA = [...COLS, 'marca'];
   const visiblesTabla = (rows) => {
     const q = estado.q.trim().toLowerCase();
-    let out = q ? rows.filter((r) => COLS.some((k) => String(r[k] ?? '').toLowerCase().includes(q))) : rows.slice();
+    let out = q ? rows.filter((r) => BUSCA.some((k) => String(r[k] ?? '').toLowerCase().includes(q))) : rows.slice();
     const { sort, dir } = estado;
     out.sort((a, b) => {
       const va = a[sort], vb = b[sort];
@@ -461,20 +530,47 @@
   const renderTabla = (rows) => {
     const vis = visiblesTabla(rows);
     $('t-count').textContent = fN.format(vis.length);
+    const DIAS_C = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+    const MESES_C = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
     $('t-body').replaceChildren(...vis.map((r) => {
-      const tr = el('tr');
-      COLS.forEach((k, i) => {
-        const td = el('td');
-        if (k === 'pieza' && r.url) { const a = el('a', '', r.pieza); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; td.appendChild(a); }
-        else td.textContent = k === 'fecha' ? (r.fecha ? fechaLarga(r.fecha, true) : 'Sin fecha') : r[k];
-        if (k === 'fecha' && r.atrasada) td.className = 'late-cell';
-        if (k === 'estado' && r.estado === 'Publicado') td.className = 'ok-cell';
-        if (i >= 4) td.classList.add('col-hide');
-        tr.appendChild(td);
-      });
+      const tr = el('tr', r.atrasada ? 'row-late' : '');
+      // Pieza + marca
+      const tdP = el('td');
+      const nom = el('div', 'p-name');
+      if (r.url) { const a = el('a', '', r.pieza); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; nom.appendChild(a); } else nom.textContent = r.pieza;
+      tdP.append(nom, el('div', 'p-sub', r.marca));
+      // Fecha
+      const tdF = el('td');
+      if (r.fecha) {
+        const d = new Date(r.fecha + 'T12:00:00Z');
+        tdF.appendChild(el('div', 'd-main', DIAS_C[d.getUTCDay()][0].toUpperCase() + DIAS_C[d.getUTCDay()].slice(1) + ' ' + d.getUTCDate() + ' ' + MESES_C[d.getUTCMonth()]));
+        if (r.atrasada) { const s = el('div', 'd-sub'); s.appendChild(el('span', 'tag tag-late', 'Atrasada')); tdF.appendChild(s); }
+        else if (r.proxima) { const s = el('div', 'd-sub'); const t = el('span', 'tag', 'Esta semana'); t.style.setProperty('--c', 'var(--sky)'); s.appendChild(t); tdF.appendChild(s); }
+      } else tdF.appendChild(el('span', 'tag tag-muted', 'Sin fecha'));
+      // Estado
+      const tdE = el('td'); tdE.appendChild(tagEstado(r.estado));
+      // País
+      const tdPa = el('td'); const bp = el('div', 'tags'); for (const p of r.paisesN) bp.appendChild(tagPais(p)); tdPa.appendChild(bp);
+      // Redes
+      const tdR = el('td', 'col-hide'); if (r.redes.length) tdR.appendChild(netsDe(r.redes)); else tdR.appendChild(el('span', 'muted', '—'));
+      // Formato
+      const tdFo = el('td', 'col-hide'); const tf = el('span', 'tag', r.formato); tf.style.setProperty('--c', 'var(--navy)'); tdFo.appendChild(tf);
+      // Categoría
+      const tdC = el('td', 'col-hide');
+      if (r.categorias.length) { const bc = el('div', 'tags'); for (const c of r.categorias) { const t = el('span', 'tag', c); t.style.setProperty('--c', 'var(--amber)'); bc.appendChild(t); } tdC.appendChild(bc); }
+      else tdC.appendChild(el('span', 'tag tag-muted', 'Sin categoría'));
+      tr.append(tdP, tdF, tdE, tdPa, tdR, tdFo, tdC);
       return tr;
     }));
   };
+
+  for (const b of document.querySelectorAll('.seg button')) {
+    b.addEventListener('click', () => {
+      colorCal = b.dataset.color;
+      try { localStorage.setItem('parrilla-color-cal', colorCal); } catch (e) {}
+      renderCalendario(filtradas());
+    });
+  }
 
   // Eventos
   for (const id of ['f-pais', 'f-mes', 'f-red']) $(id).addEventListener('change', () => { estado.filtro = { pais: $('f-pais').value, mes: $('f-mes').value, red: $('f-red').value }; render(); });
@@ -491,7 +587,7 @@
     });
   }
   let ancho = window.innerWidth;
-  window.addEventListener('resize', () => { if ((ancho < 700) !== (window.innerWidth < 700)) renderCalendario(filtradas()); ancho = window.innerWidth; });
+  window.addEventListener('resize', () => { if ((ancho < 920) !== (window.innerWidth < 920)) renderCalendario(filtradas()); ancho = window.innerWidth; });
 
   $('btn-csv').addEventListener('click', () => {
     const cab = ['Pieza', 'Fecha', 'Estado', 'País', 'Marca / cuenta', 'Redes', 'Formato', 'Categoría', 'Atrasada', 'Enlace Notion'];
