@@ -171,16 +171,6 @@
     <article class="card"><h3>Por servicio</h3><p class="note">Qué línea de negocio impulsa cada pieza.</p><div class="bars" data-dim="servicio"></div></article>
   </div>
 
-  <article class="card">
-    <h3>Resultados del contenido publicado</h3>
-    <p class="note">Se llenan al registrar Alcance, Interacciones y Leads en cada pieza publicada en Notion. <span id="r-cobertura"></span></p>
-    <div class="results">
-      <div class="result"><span class="label">Alcance</span><div class="result-value" id="r-alcance">—</div></div>
-      <div class="result"><span class="label">Interacciones</span><div class="result-value" id="r-inter">—</div></div>
-      <div class="result"><span class="label">Tasa de interacción</span><div class="result-value" id="r-tasa">—</div></div>
-      <div class="result"><span class="label">Leads / mensajes</span><div class="result-value" id="r-leads">—</div></div>
-    </div>
-  </article>
 
   <h2>Calendario editorial</h2>
   <article class="card">
@@ -365,14 +355,12 @@
     barras($('c-estados'), est, (f) => COLOR_ESTADO[f.label]);
 
     // Salud
-    const conMet = pub.filter((r) => r.alcance != null || r.interacciones != null || r.leads != null);
     const salud = [
       ['Con fecha de publicación', pct(prog, n)],
       ['Con categoría de contenido', pct(c((r) => r.categorias.length), n)],
       ['Con referencia', pct(c((r) => r.tiene_referencia), n)],
       ['Con servicio asignado', pct(c((r) => (r.servicios || []).length), n)],
       ['Con etapa del embudo', pct(c((r) => r.etapa), n)],
-      ['Publicadas con métricas', pct(conMet.length, pub.length)],
     ];
     $('c-salud').replaceChildren(...salud.map(([label, v]) => {
       const m = el('div', 'meter');
@@ -401,12 +389,6 @@
       barras(host, filas, (f) => (f.label.startsWith('Sin ') ? 'var(--st-sin)' : COLOR_DIM[dim]));
     }
 
-    // Resultados
-    const suma = (k) => (conMet.length ? conMet.reduce((s, r) => s + (r[k] || 0), 0) : null);
-    const alc = suma('alcance'), inter = suma('interacciones');
-    setT('r-alcance', alc, fC.format); setT('r-inter', inter, fC.format); setT('r-leads', suma('leads'));
-    setT('r-tasa', alc ? inter / alc : null, fP1.format);
-    $('r-cobertura').textContent = pub.length ? fN.format(conMet.length) + ' de ' + fN.format(pub.length) + ' publicadas tienen métricas.' : '';
 
     renderCalendario(rows);
     renderTabla(rows);
@@ -512,9 +494,9 @@
   window.addEventListener('resize', () => { if ((ancho < 700) !== (window.innerWidth < 700)) renderCalendario(filtradas()); ancho = window.innerWidth; });
 
   $('btn-csv').addEventListener('click', () => {
-    const cab = ['Pieza', 'Fecha', 'Estado', 'País', 'Marca / cuenta', 'Redes', 'Formato', 'Categoría', 'Atrasada', 'Alcance', 'Interacciones', 'Leads', 'Enlace Notion'];
+    const cab = ['Pieza', 'Fecha', 'Estado', 'País', 'Marca / cuenta', 'Redes', 'Formato', 'Categoría', 'Atrasada', 'Enlace Notion'];
     const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
-    const lineas = visiblesTabla(filtradas()).map((r) => [r.pieza, r.fecha || '', r.estado, r.pais, r.marca, r.redesTxt, r.formato, r.categoriasTxt, r.atrasada ? 'Sí' : 'No', r.alcance ?? '', r.interacciones ?? '', r.leads ?? '', r.url || ''].map(esc).join(';'));
+    const lineas = visiblesTabla(filtradas()).map((r) => [r.pieza, r.fecha || '', r.estado, r.pais, r.marca, r.redesTxt, r.formato, r.categoriasTxt, r.atrasada ? 'Sí' : 'No', r.url || ''].map(esc).join(';'));
     const blob = new Blob(['﻿' + [cab.map(esc).join(';'), ...lineas].join('\r\n')], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
