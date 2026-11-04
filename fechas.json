@@ -1,0 +1,22 @@
+{
+  "nota": "Fechas comerciales clave del tablero. Para agregar una, copia una línea, cambia fecha (AAAA-MM-DD), fin (opcional, para fechas de varios días), nombre y países (Colombia, Ecuador, México, USA o Todos).",
+  "fechas": [
+    {"fecha": "2026-10-31", "nombre": "Halloween", "paises": ["Todos"], "tipo": "cultural"},
+    {"fecha": "2026-11-01", "fin": "2026-11-02", "nombre": "Día de Muertos", "paises": ["México"], "tipo": "cultural"},
+    {"fecha": "2026-11-13", "fin": "2026-11-17", "nombre": "El Buen Fin", "paises": ["México"], "tipo": "comercial"},
+    {"fecha": "2026-11-26", "nombre": "Thanksgiving", "paises": ["USA"], "tipo": "festivo"},
+    {"fecha": "2026-11-27", "nombre": "Black Friday", "paises": ["Todos"], "tipo": "comercial"},
+    {"fecha": "2026-11-28", "nombre": "Small Business Saturday", "paises": ["USA"], "tipo": "comercial"},
+    {"fecha": "2026-11-30", "nombre": "Cyber Monday", "paises": ["Todos"], "tipo": "comercial"},
+    {"fecha": "2026-12-01", "nombre": "Giving Tuesday", "paises": ["USA"], "tipo": "comercial"},
+    {"fecha": "2026-12-07", "nombre": "Día de las Velitas", "paises": ["Colombia"], "tipo": "cultural"},
+    {"fecha": "2026-12-16", "fin": "2026-12-24", "nombre": "Novenas y Posadas", "paises": ["Colombia", "México", "Ecuador"], "tipo": "cultural"},
+    {"fecha": "2026-12-24", "nombre": "Nochebuena", "paises": ["Todos"], "tipo": "festivo"},
+    {"fecha": "2026-12-25", "nombre": "Navidad", "paises": ["Todos"], "tipo": "festivo"},
+    {"fecha": "2026-12-31", "nombre": "Fin de año", "paises": ["Todos"], "tipo": "festivo"},
+    {"fecha": "2027-01-06", "nombre": "Día de Reyes", "paises": ["México"], "tipo": "cultural"},
+    {"fecha": "2027-02-14", "nombre": "San Valentín", "paises": ["USA", "México", "Ecuador"], "tipo": "comercial"},
+    {"fecha": "2027-05-09", "nombre": "Día de la Madre", "paises": ["Colombia", "Ecuador", "USA"], "tipo": "comercial"},
+    {"fecha": "2027-05-10", "nombre": "Día de las Madres", "paises": ["México"], "tipo": "comercial"}
+  ]
+}

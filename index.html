@@ -86,6 +86,27 @@
   .nets { display: inline-flex; flex-wrap: wrap; gap: 3px; }
   .tags { display: flex; flex-wrap: wrap; gap: 4px; }
 
+  /* Fechas comerciales clave */
+  .fk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr)); gap: 12px; }
+  .fk { --c: var(--amber); border: 1px solid var(--line); border-top: 4px solid var(--c); border-radius: 10px; padding: 12px 14px; display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; align-items: start; background: var(--panel); }
+  .fk.tipo-festivo { --c: var(--sky); } .fk.tipo-cultural { --c: var(--st-grabar); }
+  .fk.now { box-shadow: inset 0 0 0 1px var(--c); }
+  .fk-day { grid-row: span 3; text-align: center; min-width: 3.2rem; }
+  .fk-num { font-family: var(--serif); font-size: 2rem; line-height: 1; }
+  .fk-mon { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-top: 2px; }
+  .fk-name { font-weight: 700; font-size: 14px; line-height: 1.25; }
+  .fk-when { font-size: 12px; color: var(--muted); }
+  .fk-when b { color: var(--c); }
+  .fk-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: space-between; border-top: 1px dashed var(--line); padding-top: 8px; margin-top: 4px; font-size: 12px; }
+  .fk-pz { color: var(--muted); } .fk-pz b { color: var(--fg); }
+  .fk-pz.gap b { color: var(--red); }
+  .fk-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); margin: -4px 0 14px; }
+  .fk-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .flag { --c: var(--amber); display: flex; align-items: center; gap: 4px; font-size: 10.5px; font-weight: 700; line-height: 1.25; color: var(--fg); background: color-mix(in srgb, var(--c) 22%, transparent); border-radius: 5px; padding: 3px 6px; overflow: hidden; }
+  .flag::before { content: "★"; color: var(--c); font-size: 10px; }
+  .flag.tipo-festivo { --c: var(--sky); } .flag.tipo-cultural { --c: var(--st-grabar); }
+  .day.has-flag { border-color: color-mix(in srgb, var(--amber) 55%, var(--line)); }
+
   /* Calendario */
   .cal-tools { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
@@ -206,6 +227,19 @@
   </div>
 
 
+  <section id="sec-fechas" hidden>
+    <h2>Fechas comerciales clave</h2>
+    <article class="card" style="margin-top: 14px">
+      <p class="note">Fechas que mueven compras y envíos en nuestros mercados, con las piezas que tenemos planeadas en la semana previa y durante la fecha. Se ajustan por país y mes con los filtros de arriba.</p>
+      <div class="fk-legend">
+        <span><i class="sw" style="background:var(--amber)"></i>Comercial</span>
+        <span><i class="sw" style="background:var(--sky)"></i>Festivo</span>
+        <span><i class="sw" style="background:var(--st-grabar)"></i>Cultural</span>
+      </div>
+      <div class="fk-grid" id="c-fechas"></div>
+    </article>
+  </section>
+
   <h2>Calendario editorial</h2>
   <article class="card">
     <div class="cal-tools">
@@ -265,7 +299,7 @@
   const fechaLarga = (iso, anio) => { const d = new Date(iso + 'T12:00:00Z'); return d.getUTCDate() + ' de ' + MESES[d.getUTCMonth()] + (anio ? ' de ' + d.getUTCFullYear() : ''); };
   const mesLabel = (m) => { if (m === 'Todos') return 'Todos los meses'; if (m === 'sin_fecha') return 'Sin fecha'; const [y, mm] = m.split('-'); const n = MESES[+mm - 1]; return n[0].toUpperCase() + n.slice(1) + ' ' + y; };
 
-  const estado = { piezas: [], hoy: hoyBogota(), filtro: { pais: 'Todos', mes: 'Todos', red: 'Todas' }, q: '', sort: 'fecha', dir: 1 };
+  const estado = { piezas: [], fechas: [], hoy: hoyBogota(), filtro: { pais: 'Todos', mes: 'Todos', red: 'Todas' }, q: '', sort: 'fecha', dir: 1 };
 
   // Tema claro / oscuro
   const aplicarTema = (t) => { document.documentElement.dataset.theme = t; $('btn-tema').textContent = t === 'dark' ? 'Modo claro' : 'Modo oscuro'; };
@@ -422,6 +456,7 @@
     }
 
 
+    renderFechas(rows);
     renderCalendario(rows);
     renderTabla(rows);
   };
@@ -455,6 +490,54 @@
     $('c-nets').replaceChildren(...redes.map((r) => { const s = el('span'); s.append(netsDe([r]), r); return s; }));
   };
 
+  // Fechas comerciales clave
+  const fechasDelPais = () => estado.fechas.filter((f) => estado.filtro.pais === 'Todos' || f.paises.includes('Todos') || f.paises.includes(estado.filtro.pais));
+  const diasEntre = (a, b) => Math.round((new Date(b + 'T12:00:00Z') - new Date(a + 'T12:00:00Z')) / 864e5);
+  const flagsPorDia = () => {
+    const m = new Map();
+    for (const f of fechasDelPais()) {
+      for (let d = f.fecha; d <= f.fin; d = sumarDias(d, 1)) { if (!m.has(d)) m.set(d, []); m.get(d).push(f); }
+    }
+    return m;
+  };
+  const MESES_CORTOS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+
+  const renderFechas = (rows) => {
+    const sec = $('sec-fechas');
+    const host = $('c-fechas');
+    const hoy = estado.hoy;
+    const mes = estado.filtro.mes;
+    let lista = fechasDelPais().sort((a, b) => a.fecha.localeCompare(b.fecha));
+    if (mes !== 'Todos' && mes !== 'sin_fecha') lista = lista.filter((f) => f.fecha.slice(0, 7) <= mes && f.fin.slice(0, 7) >= mes);
+    else lista = lista.filter((f) => f.fin >= hoy).slice(0, 8);
+    sec.hidden = !estado.fechas.length;
+    if (!lista.length) { host.replaceChildren(el('p', 'note', 'No hay fechas clave para este filtro.')); return; }
+    host.replaceChildren(...lista.map((f) => {
+      const d = new Date(f.fecha + 'T12:00:00Z');
+      const enCurso = f.fecha <= hoy && f.fin >= hoy;
+      const card = el('div', 'fk tipo-' + f.tipo + (enCurso ? ' now' : ''));
+      const day = el('div', 'fk-day');
+      day.append(el('div', 'fk-num', d.getUTCDate()), el('div', 'fk-mon', MESES_CORTOS[d.getUTCMonth()]));
+      const varios = f.fin !== f.fecha;
+      const fin = new Date(f.fin + 'T12:00:00Z');
+      const rango = varios ? 'Del ' + d.getUTCDate() + ' ' + MESES_CORTOS[d.getUTCMonth()] + ' al ' + fin.getUTCDate() + ' ' + MESES_CORTOS[fin.getUTCMonth()] : DIAS[d.getUTCDay()][0].toUpperCase() + DIAS[d.getUTCDay()].slice(1);
+      const when = el('div', 'fk-when');
+      const faltan = diasEntre(hoy, f.fecha);
+      const cuando = enCurso ? 'en curso' : faltan < 0 ? 'ya pasó' : faltan === 0 ? 'hoy' : faltan === 1 ? 'mañana' : 'en ' + faltan + ' días';
+      when.append(rango + ' · ', el('b', '', cuando));
+      const tags = el('div', 'tags');
+      for (const p of f.paises) tags.appendChild(p === 'Todos' ? el('span', 'tag tag-muted', 'Todos los mercados') : tagPais(p, true));
+      const desde = sumarDias(f.fecha, -7);
+      const n = rows.filter((r) => r.fecha && r.fecha >= desde && r.fecha <= f.fin).length;
+      const foot = el('div', 'fk-foot');
+      const pz = el('span', 'fk-pz' + (n === 0 && faltan >= 0 ? ' gap' : ''));
+      pz.append(el('b', '', fN.format(n)), n === 1 ? ' pieza planeada alrededor de la fecha' : ' piezas planeadas alrededor de la fecha');
+      foot.appendChild(pz);
+      card.append(day, el('div', 'fk-name', f.nombre), when, tags, foot);
+      return card;
+    }));
+  };
+
   const renderCalendario = (rows) => {
     const host = $('c-cal');
     const piezas = rows.filter((r) => r.fecha);
@@ -478,12 +561,16 @@
       ch.addEventListener('mouseleave', tt.hide);
       return ch;
     };
+    const flags = flagsPorDia();
+    const flagEls = (iso) => (flags.get(iso) || []).map((f) => { const fl = el('div', 'flag tipo-' + f.tipo, f.nombre); fl.title = f.nombre + ' · ' + f.paises.join(', '); return fl; });
     const nodos = [];
     if (host.clientWidth < 860) {
-      for (const f of [...porDia.keys()].sort()) {
+      const mesesVis = new Set(piezas.map((r) => r.mes));
+      const dias = new Set([...porDia.keys(), ...[...flags.keys()].filter((k) => mesesVis.has(k.slice(0, 7)))]);
+      for (const f of [...dias].sort()) {
         const d = new Date(f + 'T12:00:00Z');
         const dia = el('div', 'agenda-day');
-        dia.append(el('div', 'agenda-date', DIAS[d.getUTCDay()][0].toUpperCase() + DIAS[d.getUTCDay()].slice(1) + ' ' + fechaLarga(f) + (f === estado.hoy ? ' · hoy' : '')), ...porDia.get(f).map(chip));
+        dia.append(el('div', 'agenda-date', DIAS[d.getUTCDay()][0].toUpperCase() + DIAS[d.getUTCDay()].slice(1) + ' ' + fechaLarga(f) + (f === estado.hoy ? ' · hoy' : '')), ...flagEls(f), ...(porDia.get(f) || []).map(chip));
         nodos.push(dia);
       }
     } else {
@@ -500,8 +587,10 @@
           const d = new Date(iso + 'T12:00:00Z');
           const dentro = d.getUTCMonth() === mm - 1;
           const finde = d.getUTCDay() === 0 || d.getUTCDay() === 6;
-          const cell = el('div', 'day' + (dentro ? '' : ' out') + (finde ? ' weekend' : '') + (iso === estado.hoy ? ' today' : ''));
+          const tieneFlag = dentro && flags.has(iso);
+          const cell = el('div', 'day' + (dentro ? '' : ' out') + (finde ? ' weekend' : '') + (tieneFlag ? ' has-flag' : '') + (iso === estado.hoy ? ' today' : ''));
           cell.appendChild(el('span', 'num', d.getUTCDate()));
+          if (tieneFlag) cell.append(...flagEls(iso));
           if (dentro) for (const r of porDia.get(iso) || []) cell.appendChild(chip(r));
           grid.appendChild(cell);
           iso = sumarDias(iso, 1);
@@ -609,6 +698,10 @@
       const data = await res.json();
       estado.hoy = hoyBogota();
       estado.piezas = (data.piezas || []).map((r) => normalizar(r, estado.hoy));
+      try {
+        const rf = await fetch('fechas.json?t=' + Date.now(), { cache: 'no-store' });
+        estado.fechas = rf.ok ? ((await rf.json()).fechas || []).filter((f) => f && f.fecha && f.nombre).map((f) => ({ ...f, fin: f.fin || f.fecha, paises: f.paises && f.paises.length ? f.paises : ['Todos'], tipo: f.tipo || 'comercial' })) : [];
+      } catch (e) { estado.fechas = []; }
       $('hoy').textContent = fechaLarga(estado.hoy, true);
       $('actualizado').textContent = data.actualizado ? new Intl.DateTimeFormat('es-CO', { timeZone: 'America/Bogota', dateStyle: 'medium', timeStyle: 'short' }).format(new Date(data.actualizado)) : '—';
       render();
