@@ -1,0 +1,40 @@
+name: Actualizar parrilla desde Notion
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # cada hora (UTC), al minuto 17
+  workflow_dispatch:        # botón "Run workflow" para actualizar a mano
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-parrilla
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Leer la parrilla en Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python scripts/actualizar_notion.py
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+          else
+            git commit -m "Actualiza parrilla desde Notion"
+            git push
+          fi

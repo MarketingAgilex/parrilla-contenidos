@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parrilla de contenidos · Ágilex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo: #3434c0; --amber: #f2a01f; --sky: #1f9ad6; --navy: #0d4f8c; --green: #1f9d6b; --red: #d64545;
+    --st-idea: #8a8f98; --st-grabar: #7c5cd6; --st-editar: #e0603a; --st-correccion: #1f9ad6;
+    --st-publicar: #f2a01f; --st-publicado: #1f9d6b; --st-sin: #b8bcc4;
+    --bg: #eef2f7; --panel: #ffffff; --fg: #12192b; --muted: #5d6679; --line: #dde3ec; --soft: #eef1f6; --field: #f4f7fb;
+    --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 4px 14px rgba(16, 24, 40, .05);
+    --radius: 12px;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Source Serif 4", Georgia, serif;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1420; --panel: #171e2d; --fg: #e8ecf4; --muted: #9aa4b8; --line: #2a3346; --soft: #222b3d; --field: #1d2536;
+    --shadow: 0 1px 2px rgba(0,0,0,.3);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; }
+  .page { max-width: 1400px; margin: 0 auto; padding: 24px 16px 48px; display: flex; flex-direction: column; gap: 18px; position: relative; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); min-width: 0; }
+  .head { position: relative; overflow: hidden; padding-top: 26px; }
+  .stripe { position: absolute; inset: 0 0 auto 0; height: 6px; display: flex; }
+  .stripe span { flex: 1; } .stripe span:nth-child(1) { background: var(--indigo); } .stripe span:nth-child(2) { background: var(--amber); } .stripe span:nth-child(3) { background: var(--sky); }
+  .head-row { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .brand { border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 20px; display: flex; flex-direction: column; }
+  .brand-name { font-weight: 800; font-size: 1.7rem; letter-spacing: .02em; color: var(--indigo); font-style: italic; line-height: 1.1; }
+  :root[data-theme="dark"] .brand-name { color: #8f8ff0; }
+  .brand-name i { color: var(--amber); }
+  .brand-sub { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+  .head-text { flex: 1 1 22rem; min-width: 0; }
+  h1 { font-family: var(--serif); font-weight: 600; font-size: 1.65rem; margin: 0; line-height: 1.2; }
+  .sub { color: var(--muted); margin: 4px 0 0; }
+  .badge { display: inline-flex; gap: 6px; align-items: center; margin-top: 10px; background: var(--field); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: 12px; color: var(--muted); }
+  .badge b { color: var(--fg); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .btn { font: inherit; font-size: 14px; color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+  .btn:hover { border-color: var(--indigo); }
+  .btn-primary { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .takeaway { margin: 16px 0 0; line-height: 1.55; }
+  .filters { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+  .field { display: flex; flex-direction: column; gap: 5px; flex: 0 1 16rem; min-width: 11rem; }
+  .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+  select, input[type=search] { font: inherit; font-size: 14px; color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: 14px; }
+  .kpi { border-top: 4px solid var(--indigo); padding: 14px 18px; display: flex; flex-direction: column; gap: 3px; }
+  .kpi:nth-child(2) { border-top-color: var(--amber); } .kpi:nth-child(3) { border-top-color: var(--green); } .kpi:nth-child(4) { border-top-color: var(--red); } .kpi:nth-child(5) { border-top-color: var(--sky); } .kpi:nth-child(6) { border-top-color: var(--navy); }
+  .kpi-value { font-family: var(--serif); font-size: 2.3rem; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .kpi-late .kpi-value { color: var(--red); }
+  .kpi-note { font-size: 12px; color: var(--muted); } .kpi-note b { color: var(--fg); }
+  h2 { font-size: 1.1rem; font-weight: 600; margin: 8px 0 0; }
+  h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 14px; }
+  .note { font-size: 12px; color: var(--muted); margin: 4px 0 14px; line-height: 1.45; }
+  .bars { display: flex; flex-direction: column; gap: 9px; position: relative; }
+  .bar-row { display: grid; grid-template-columns: minmax(6rem, 9.5rem) 1fr 3rem; gap: 10px; align-items: center; font-size: 13px; }
+  .bar-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-track { height: 18px; background: var(--soft); border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; min-width: 2px; }
+  .bar-row:hover .bar-fill { opacity: .8; }
+  .bar-val { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .meters { display: flex; flex-direction: column; gap: 10px; }
+  .meter { display: grid; grid-template-columns: minmax(8rem, 13rem) 1fr 3rem; gap: 10px; align-items: center; font-size: 13px; }
+  .meter-track { height: 10px; background: var(--soft); border-radius: 999px; overflow: hidden; }
+  .meter-fill { height: 100%; border-radius: 999px; }
+  .meter b { text-align: right; font-variant-numeric: tabular-nums; }
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: 14px; }
+  .result { border-left: 3px solid var(--sky); padding-left: 10px; }
+  .result-value { font-family: var(--serif); font-size: 1.7rem; font-variant-numeric: tabular-nums; }
+  .tip { position: absolute; pointer-events: none; z-index: 20; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,.15); padding: 6px 10px; font-size: 12px; max-width: 16rem; line-height: 1.4; }
+  .tip .k { color: var(--muted); }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .sw-late { box-shadow: inset 0 0 0 1.5px var(--red); }
+  .cal { position: relative; }
+  .month { margin-bottom: 22px; }
+  .month-name { font-weight: 600; margin: 0 0 8px; text-transform: capitalize; }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+  .dow { font-size: 11px; color: var(--muted); text-align: center; }
+  .day { min-height: 5.6rem; border: 1px solid var(--line); border-radius: 8px; padding: 4px; display: flex; flex-direction: column; gap: 3px; background: var(--field); min-width: 0; }
+  .day.out { opacity: .35; } .day.today { border-color: var(--indigo); box-shadow: inset 0 0 0 1px var(--indigo); }
+  .num { font-size: 11px; color: var(--muted); }
+  .chip { font-size: 11px; line-height: 1.25; padding: 2px 4px; border-radius: 4px; border-left: 3px solid var(--st-sin); background: var(--soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .chip.late { box-shadow: inset 0 0 0 1px var(--red); }
+  .agenda-day { padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .agenda-date { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .agenda-day .chip { white-space: normal; margin-bottom: 3px; font-size: 12px; }
+  .table-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .table-tools input { flex: 0 1 20rem; min-width: 0; }
+  .table-box { max-height: 32rem; overflow: auto; border: 1px solid var(--line); border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { position: sticky; top: 0; background: var(--panel); text-align: left; border-bottom: 1px solid var(--line); padding: 0; z-index: 1; }
+  th button { all: unset; cursor: pointer; display: block; padding: 8px 10px; font-weight: 600; white-space: nowrap; }
+  th[aria-sort=ascending] button::after { content: " ▲"; font-size: 9px; } th[aria-sort=descending] button::after { content: " ▼"; font-size: 9px; }
+  td { padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:hover td { background: var(--field); }
+  td a { color: inherit; font-weight: 600; text-decoration: none; } td a:hover { text-decoration: underline; }
+  .late-cell { color: var(--red); font-weight: 600; } .ok-cell { color: var(--green); font-weight: 600; }
+  .msg { padding: 40px 20px; text-align: center; color: var(--muted); }
+  footer { text-align: center; font-size: 12px; color: var(--muted); }
+  @media (max-width: 720px) { .col-hide { display: none; } .kpi-value { font-size: 1.9rem; } h1 { font-size: 1.35rem; } }
+</style>
+</head>
+<body>
+<div class="page" id="app">
+
+  <header class="card head">
+    <div class="stripe"><span></span><span></span><span></span></div>
+    <div class="head-row">
+      <div class="brand"><span class="brand-name">ÁGILE<i>X</i></span><span class="brand-sub">Marketing</span></div>
+      <div class="head-text">
+        <h1>Parrilla de contenidos · Tablero de gestión</h1>
+        <p class="sub">Planeación, producción y desempeño del contenido orgánico por país, red social y formato.</p>
+        <span class="badge"><span class="dot"></span>Fuente: Notion · Datos actualizados: <b id="actualizado">—</b> · Corte: <b id="hoy">—</b></span>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" id="btn-csv" type="button">⬇ Descargar CSV</button>
+        <button class="btn" id="btn-recargar" type="button">↻ Recargar</button>
+        <button class="btn" id="btn-tema" type="button">Modo oscuro</button>
+      </div>
+    </div>
+    <p class="takeaway" id="lectura">Cargando datos…</p>
+  </header>
+
+  <section class="card filters" aria-label="Filtros">
+    <div class="field"><label class="label" for="f-pais">País</label><select id="f-pais"></select></div>
+    <div class="field"><label class="label" for="f-mes">Mes de publicación</label><select id="f-mes"></select></div>
+    <div class="field"><label class="label" for="f-red">Red social</label><select id="f-red"></select></div>
+    <button class="btn" id="btn-limpiar" type="button">Limpiar filtros</button>
+  </section>
+
+  <section class="kpis">
+    <div class="card kpi"><span class="label">Piezas en parrilla</span><span class="kpi-value" id="k-total">—</span><span class="kpi-note">Todo lo registrado en Notion</span></div>
+    <div class="card kpi"><span class="label">Programadas</span><span class="kpi-value" id="k-prog">—</span><span class="kpi-note"><b id="k-pctfecha">—</b> del total tiene fecha</span></div>
+    <div class="card kpi"><span class="label">Publicadas</span><span class="kpi-value" id="k-pub">—</span><span class="kpi-note">Cumplimiento <b id="k-cumpl">—</b></span></div>
+    <div class="card kpi kpi-late"><span class="label">Atrasadas</span><span class="kpi-value" id="k-atr">—</span><span class="kpi-note">Fecha vencida sin marcar como publicada</span></div>
+    <div class="card kpi"><span class="label">Próximos 7 días</span><span class="kpi-value" id="k-prox">—</span><span class="kpi-note">Piezas que salen esta semana</span></div>
+    <div class="card kpi"><span class="label">Banco sin fecha</span><span class="kpi-value" id="k-sinf">—</span><span class="kpi-note">Contenido listo para programar</span></div>
+  </section>
+
+  <h2>Operación de contenido</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>Flujo de producción</h3>
+      <p class="note">Piezas en cada etapa, de la idea a la publicación. El cuello de botella es la etapa con más piezas acumuladas.</p>
+      <div class="bars" id="c-estados"></div>
+    </article>
+    <article class="card">
+      <h3>Salud de la parrilla</h3>
+      <p class="note">Qué tan completa está la información de cada pieza. Por debajo de 80 % el análisis de mix pierde precisión.</p>
+      <div class="meters" id="c-salud"></div>
+    </article>
+  </div>
+
+  <h2>Mix estratégico</h2>
+  <div class="grid">
+    <article class="card"><h3>Por red social</h3><p class="note">Una pieza puede ir a varias redes.</p><div class="bars" data-dim="red"></div></article>
+    <article class="card"><h3>Por categoría de contenido</h3><p class="note">Equilibrio entre educar, conectar y vender. Una pieza puede tener varias categorías.</p><div class="bars" data-dim="categoria"></div></article>
+    <article class="card"><h3>Por formato</h3><p class="note">Reel, carrusel o imagen.</p><div class="bars" data-dim="formato"></div></article>
+    <article class="card"><h3>Por marca o cuenta</h3><p class="note">Ágilex, Ágilbox, Comerciantex y la cuenta de TikTok de Jose.</p><div class="bars" data-dim="marca"></div></article>
+    <article class="card"><h3>Por país</h3><p class="note">Mercado al que va dirigida la pieza.</p><div class="bars" data-dim="pais"></div></article>
+    <article class="card"><h3>Por servicio</h3><p class="note">Qué línea de negocio impulsa cada pieza.</p><div class="bars" data-dim="servicio"></div></article>
+  </div>
+
+  <article class="card">
+    <h3>Resultados del contenido publicado</h3>
+    <p class="note">Se llenan al registrar Alcance, Interacciones y Leads en cada pieza publicada en Notion. <span id="r-cobertura"></span></p>
+    <div class="results">
+      <div class="result"><span class="label">Alcance</span><div class="result-value" id="r-alcance">—</div></div>
+      <div class="result"><span class="label">Interacciones</span><div class="result-value" id="r-inter">—</div></div>
+      <div class="result"><span class="label">Tasa de interacción</span><div class="result-value" id="r-tasa">—</div></div>
+      <div class="result"><span class="label">Leads / mensajes</span><div class="result-value" id="r-leads">—</div></div>
+    </div>
+  </article>
+
+  <h2>Calendario editorial</h2>
+  <article class="card">
+    <div class="legend">
+      <span><i class="sw" style="background:var(--st-idea)"></i>Idea</span>
+      <span><i class="sw" style="background:var(--st-grabar)"></i>Por grabar</span>
+      <span><i class="sw" style="background:var(--st-editar)"></i>Por editar</span>
+      <span><i class="sw" style="background:var(--st-correccion)"></i>En corrección</span>
+      <span><i class="sw" style="background:var(--st-publicar)"></i>Por publicar</span>
+      <span><i class="sw" style="background:var(--st-publicado)"></i>Publicado</span>
+      <span><i class="sw sw-late"></i>Atrasada</span>
+    </div>
+    <div class="cal" id="c-cal"></div>
+  </article>
+
+  <h2>Detalle de piezas</h2>
+  <article class="card">
+    <div class="table-tools">
+      <input type="search" id="buscar" placeholder="Buscar pieza, red, categoría…" aria-label="Buscar">
+      <span class="kpi-note"><span id="t-count">0</span> piezas · clic en un encabezado para ordenar · clic en la pieza para abrirla en Notion</span>
+    </div>
+    <div class="table-box">
+      <table>
+        <thead><tr>
+          <th data-col="pieza"><button type="button">Pieza</button></th>
+          <th data-col="fecha" aria-sort="ascending"><button type="button">Fecha</button></th>
+          <th data-col="estado"><button type="button">Estado</button></th>
+          <th data-col="pais"><button type="button">País</button></th>
+          <th data-col="marca" class="col-hide"><button type="button">Marca / cuenta</button></th>
+          <th data-col="redesTxt" class="col-hide"><button type="button">Redes</button></th>
+          <th data-col="formato" class="col-hide"><button type="button">Formato</button></th>
+          <th data-col="categoriasTxt" class="col-hide"><button type="button">Categoría</button></th>
+        </tr></thead>
+        <tbody id="t-body"></tbody>
+      </table>
+    </div>
+  </article>
+
+  <footer>Ágilex Express S.A.S. · Marketing · Tablero alimentado automáticamente desde la parrilla de contenidos en Notion.</footer>
+</div>
+
+<script>
+(() => {
+  const PAISES = ['Colombia', 'Ecuador', 'México', 'USA'];
+  const MARCAS = ['Ágilbox', 'Comerciantex', 'TikTok Jose'];
+  const ORDEN_ESTADOS = ['Idea', 'Por grabar', 'Por editar', 'En corrección', 'Por publicar', 'Publicado', 'Sin estado'];
+  const COLOR_ESTADO = { 'Idea': 'var(--st-idea)', 'Por grabar': 'var(--st-grabar)', 'Por editar': 'var(--st-editar)', 'En corrección': 'var(--st-correccion)', 'Por publicar': 'var(--st-publicar)', 'Publicado': 'var(--st-publicado)', 'Sin estado': 'var(--st-sin)' };
+  const COLOR_DIM = { red: 'var(--indigo)', categoria: 'var(--amber)', formato: 'var(--sky)', marca: 'var(--navy)', pais: 'var(--green)', servicio: 'var(--st-grabar)' };
+  const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+  const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+  const fN = new Intl.NumberFormat('es-CO');
+  const fP = new Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 0 });
+  const fP1 = new Intl.NumberFormat('es-CO', { style: 'percent', maximumFractionDigits: 1 });
+  const fC = new Intl.NumberFormat('es-CO', { notation: 'compact', maximumFractionDigits: 1 });
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+  const hoyBogota = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota' }).format(new Date());
+  const sumarDias = (iso, n) => { const d = new Date(iso + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+  const fechaLarga = (iso, anio) => { const d = new Date(iso + 'T12:00:00Z'); return d.getUTCDate() + ' de ' + MESES[d.getUTCMonth()] + (anio ? ' de ' + d.getUTCFullYear() : ''); };
+  const mesLabel = (m) => { if (m === 'Todos') return 'Todos los meses'; if (m === 'sin_fecha') return 'Sin fecha'; const [y, mm] = m.split('-'); const n = MESES[+mm - 1]; return n[0].toUpperCase() + n.slice(1) + ' ' + y; };
+
+  const estado = { piezas: [], hoy: hoyBogota(), filtro: { pais: 'Todos', mes: 'Todos', red: 'Todas' }, q: '', sort: 'fecha', dir: 1 };
+
+  // Tema claro / oscuro
+  const aplicarTema = (t) => { document.documentElement.dataset.theme = t; $('btn-tema').textContent = t === 'dark' ? 'Modo claro' : 'Modo oscuro'; };
+  let tema = 'light';
+  try { tema = localStorage.getItem('parrilla-tema') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (e) {}
+  aplicarTema(tema);
+  $('btn-tema').addEventListener('click', () => { tema = tema === 'dark' ? 'light' : 'dark'; aplicarTema(tema); try { localStorage.setItem('parrilla-tema', tema); } catch (e) {} });
+
+  // Normaliza cada pieza
+  const normalizar = (r, hoy) => {
+    const tags = r.paises || [];
+    const paises = tags.filter((t) => PAISES.includes(t));
+    const redesRaw = r.redes || [];
+    const soloJose = redesRaw.length === 1 && redesRaw[0].toLowerCase() === 'tiktok jose';
+    const marca = r.marca || tags.find((t) => MARCAS.includes(t)) || (soloJose ? 'TikTok Jose' : 'Ágilex');
+    const redes = [...new Set(redesRaw.map((x) => (x.toLowerCase().startsWith('tiktok') ? 'TikTok' : x)))];
+    const cats = r.categorias || [];
+    const est = r.estado || 'Sin estado';
+    const fecha = r.fecha || null;
+    return {
+      ...r, estado: est, fecha, formato: r.formato || 'Sin formato', marca, redes, categorias: cats,
+      paisesN: paises.length ? paises : ['Sin país'], pais: paises.length ? paises.join(', ') : 'Sin país',
+      redesTxt: redes.join(', ') || 'Sin red', categoriasTxt: cats.join(', ') || 'Sin categoría',
+      mes: fecha ? fecha.slice(0, 7) : 'sin_fecha',
+      atrasada: !!fecha && fecha < hoy && est !== 'Publicado',
+      proxima: !!fecha && fecha >= hoy && fecha <= sumarDias(hoy, 7),
+    };
+  };
+
+  const filtradas = () => {
+    const f = estado.filtro;
+    return estado.piezas.filter((r) => (f.pais === 'Todos' || r.paisesN.includes(f.pais)) && (f.mes === 'Todos' || r.mes === f.mes) && (f.red === 'Todas' || r.redes.includes(f.red)));
+  };
+
+  // Tooltip
+  const tip = (host) => {
+    const get = () => { let t = host.querySelector(':scope > .tip'); if (!t) { t = el('div', 'tip'); t.hidden = true; host.appendChild(t); } return t; };
+    return {
+      show(e, lineas) {
+        const t = get();
+        t.replaceChildren(...lineas.map((l, i) => el('div', i === 0 ? 'k' : '', l)));
+        t.hidden = false;
+        const b = host.getBoundingClientRect();
+        let x = e.clientX - b.left + 12, y = e.clientY - b.top + 12;
+        if (x + t.offsetWidth > b.width) x = Math.max(0, e.clientX - b.left - t.offsetWidth - 12);
+        t.style.left = x + 'px'; t.style.top = y + 'px';
+      },
+      hide() { const t = host.querySelector(':scope > .tip'); if (t) t.hidden = true; },
+    };
+  };
+
+  const barras = (host, filas, color) => {
+    const max = Math.max(1, ...filas.map((f) => f.n));
+    const total = filas.total || 1;
+    const tt = tip(host);
+    host.replaceChildren(...filas.map((f) => {
+      const row = el('div', 'bar-row');
+      const track = el('div', 'bar-track');
+      const fill = el('div', 'bar-fill');
+      fill.style.width = (f.n / max * 100) + '%';
+      fill.style.background = typeof color === 'function' ? color(f) : color;
+      track.appendChild(fill);
+      row.append(el('span', 'bar-label', f.label), track, el('span', 'bar-val', fN.format(f.n)));
+      row.addEventListener('mousemove', (e) => tt.show(e, [f.label, 'Piezas: ' + fN.format(f.n), 'Participación: ' + fP.format(f.n / total)]));
+      row.addEventListener('mouseleave', tt.hide);
+      return row;
+    }));
+    if (!filas.length) host.replaceChildren(el('p', 'note', 'Sin piezas para este filtro.'));
+  };
+
+  const contar = (rows, get) => {
+    const m = new Map();
+    for (const r of rows) for (const v of get(r)) m.set(v, (m.get(v) || 0) + 1);
+    const out = [...m].map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n || a.label.localeCompare(b.label));
+    out.total = rows.length;
+    return out;
+  };
+
+  const llenarSelect = (sel, valores, etiqueta, actual) => {
+    sel.replaceChildren(...valores.map((v) => new Option(etiqueta(v), v)));
+    sel.value = valores.includes(actual) ? actual : valores[0];
+  };
+
+  const render = () => {
+    const todas = estado.piezas;
+    // Opciones de filtros
+    const paises = ['Todos', ...PAISES.filter((p) => todas.some((r) => r.paisesN.includes(p))), ...(todas.some((r) => r.paisesN.includes('Sin país')) ? ['Sin país'] : [])];
+    const meses = ['Todos', ...[...new Set(todas.map((r) => r.mes))].filter((m) => m !== 'sin_fecha').sort(), ...(todas.some((r) => r.mes === 'sin_fecha') ? ['sin_fecha'] : [])];
+    const redes = ['Todas', ...[...new Set(todas.flatMap((r) => r.redes))].sort()];
+    llenarSelect($('f-pais'), paises, (v) => (v === 'Todos' ? 'Todos los países' : v), estado.filtro.pais);
+    llenarSelect($('f-mes'), meses, mesLabel, estado.filtro.mes);
+    llenarSelect($('f-red'), redes, (v) => (v === 'Todas' ? 'Todas las redes' : v), estado.filtro.red);
+    estado.filtro = { pais: $('f-pais').value, mes: $('f-mes').value, red: $('f-red').value };
+
+    const rows = filtradas();
+    const n = rows.length;
+    const c = (fn) => rows.filter(fn).length;
+    const pct = (a, b) => (b ? a / b : null);
+    const prog = c((r) => r.fecha);
+    const pub = rows.filter((r) => r.estado === 'Publicado');
+    const atr = c((r) => r.atrasada);
+    const cumpl = pct(pub.length, pub.length + atr);
+    const setT = (id, v, fmt) => { $(id).textContent = v == null ? '—' : (fmt || fN.format)(v); };
+
+    setT('k-total', n); setT('k-prog', prog); setT('k-pub', pub.length); setT('k-atr', atr);
+    setT('k-prox', c((r) => r.proxima)); setT('k-sinf', n - prog);
+    setT('k-pctfecha', pct(prog, n), fP.format); setT('k-cumpl', cumpl, fP.format);
+
+    const lectura = $('lectura');
+    lectura.replaceChildren();
+    const b = (t) => el('b', '', t);
+    lectura.append('De ', b(fN.format(n)), ' piezas en la parrilla, ', b(fN.format(prog)), ' tienen fecha de publicación; ',
+      b(fN.format(atr)), atr === 1 ? ' ya pasó su fecha sin marcarse como publicada' : ' ya pasaron su fecha sin marcarse como publicadas',
+      ' y ', b(fN.format(n - prog)), ' esperan en el banco sin programar.');
+
+    // Flujo de producción
+    const est = ORDEN_ESTADOS.map((e) => ({ label: e, n: c((r) => r.estado === e) })).filter((f) => f.label !== 'Sin estado' || f.n > 0);
+    est.total = n;
+    barras($('c-estados'), est, (f) => COLOR_ESTADO[f.label]);
+
+    // Salud
+    const conMet = pub.filter((r) => r.alcance != null || r.interacciones != null || r.leads != null);
+    const salud = [
+      ['Con fecha de publicación', pct(prog, n)],
+      ['Con categoría de contenido', pct(c((r) => r.categorias.length), n)],
+      ['Con referencia', pct(c((r) => r.tiene_referencia), n)],
+      ['Con servicio asignado', pct(c((r) => (r.servicios || []).length), n)],
+      ['Con etapa del embudo', pct(c((r) => r.etapa), n)],
+      ['Publicadas con métricas', pct(conMet.length, pub.length)],
+    ];
+    $('c-salud').replaceChildren(...salud.map(([label, v]) => {
+      const m = el('div', 'meter');
+      const track = el('div', 'meter-track');
+      const fill = el('div', 'meter-fill');
+      fill.style.width = ((v || 0) * 100) + '%';
+      fill.style.background = v == null ? 'transparent' : v >= 0.8 ? 'var(--green)' : v >= 0.5 ? 'var(--amber)' : 'var(--red)';
+      track.appendChild(fill);
+      m.append(el('span', '', label), track, el('b', '', v == null ? '—' : fP.format(v)));
+      return m;
+    }));
+
+    // Mix
+    const DIMS = {
+      red: (r) => (r.redes.length ? r.redes : ['Sin red']),
+      categoria: (r) => (r.categorias.length ? r.categorias : ['Sin categoría']),
+      formato: (r) => [r.formato],
+      marca: (r) => [r.marca],
+      pais: (r) => r.paisesN,
+      servicio: (r) => ((r.servicios || []).length ? r.servicios : ['Sin servicio']),
+    };
+    for (const host of document.querySelectorAll('.bars[data-dim]')) {
+      const dim = host.dataset.dim;
+      const filas = contar(rows, DIMS[dim]).slice(0, 8);
+      filas.total = n;
+      barras(host, filas, (f) => (f.label.startsWith('Sin ') ? 'var(--st-sin)' : COLOR_DIM[dim]));
+    }
+
+    // Resultados
+    const suma = (k) => (conMet.length ? conMet.reduce((s, r) => s + (r[k] || 0), 0) : null);
+    const alc = suma('alcance'), inter = suma('interacciones');
+    setT('r-alcance', alc, fC.format); setT('r-inter', inter, fC.format); setT('r-leads', suma('leads'));
+    setT('r-tasa', alc ? inter / alc : null, fP1.format);
+    $('r-cobertura').textContent = pub.length ? fN.format(conMet.length) + ' de ' + fN.format(pub.length) + ' publicadas tienen métricas.' : '';
+
+    renderCalendario(rows);
+    renderTabla(rows);
+  };
+
+  const renderCalendario = (rows) => {
+    const host = $('c-cal');
+    const piezas = rows.filter((r) => r.fecha);
+    if (!piezas.length) {
+      host.replaceChildren(el('p', 'note', estado.filtro.mes === 'sin_fecha' ? 'Las piezas sin fecha no se muestran en el calendario: aparecen en el detalle.' : 'No hay piezas programadas para este filtro.'));
+      return;
+    }
+    const tt = tip(host);
+    const porDia = new Map();
+    for (const r of piezas) { if (!porDia.has(r.fecha)) porDia.set(r.fecha, []); porDia.get(r.fecha).push(r); }
+    const chip = (r) => {
+      const ch = el('div', 'chip' + (r.atrasada ? ' late' : ''), r.pieza);
+      ch.style.borderLeftColor = COLOR_ESTADO[r.estado] || 'var(--st-sin)';
+      ch.addEventListener('mousemove', (e) => tt.show(e, [fechaLarga(r.fecha), r.pieza, 'Estado: ' + r.estado + (r.atrasada ? ' (atrasada)' : ''), 'País: ' + r.pais, 'Formato: ' + r.formato, 'Redes: ' + r.redesTxt]));
+      ch.addEventListener('mouseleave', tt.hide);
+      return ch;
+    };
+    const nodos = [];
+    if (host.clientWidth < 640) {
+      for (const f of [...porDia.keys()].sort()) {
+        const d = new Date(f + 'T12:00:00Z');
+        const dia = el('div', 'agenda-day');
+        dia.append(el('div', 'agenda-date', DIAS[d.getUTCDay()] + ' ' + fechaLarga(f) + (f === estado.hoy ? ' · hoy' : '')), ...porDia.get(f).map(chip));
+        nodos.push(dia);
+      }
+    } else {
+      for (const m of [...new Set(piezas.map((r) => r.mes))].sort()) {
+        const [y, mm] = m.split('-').map(Number);
+        const wrap = el('div', 'month');
+        const grid = el('div', 'cal-grid');
+        for (const w of ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom']) grid.appendChild(el('div', 'dow', w));
+        const first = new Date(Date.UTC(y, mm - 1, 1));
+        const last = new Date(Date.UTC(y, mm, 0));
+        let iso = sumarDias(first.toISOString().slice(0, 10), -((first.getUTCDay() + 6) % 7));
+        const fin = sumarDias(last.toISOString().slice(0, 10), (7 - last.getUTCDay()) % 7);
+        while (iso <= fin) {
+          const d = new Date(iso + 'T12:00:00Z');
+          const dentro = d.getUTCMonth() === mm - 1;
+          const cell = el('div', 'day' + (dentro ? '' : ' out') + (iso === estado.hoy ? ' today' : ''));
+          cell.appendChild(el('span', 'num', d.getUTCDate()));
+          if (dentro) for (const r of porDia.get(iso) || []) cell.appendChild(chip(r));
+          grid.appendChild(cell);
+          iso = sumarDias(iso, 1);
+        }
+        wrap.append(el('p', 'month-name', MESES[mm - 1] + ' ' + y), grid);
+        nodos.push(wrap);
+      }
+    }
+    host.replaceChildren(...nodos);
+  };
+
+  const COLS = ['pieza', 'fecha', 'estado', 'pais', 'marca', 'redesTxt', 'formato', 'categoriasTxt'];
+  const visiblesTabla = (rows) => {
+    const q = estado.q.trim().toLowerCase();
+    let out = q ? rows.filter((r) => COLS.some((k) => String(r[k] ?? '').toLowerCase().includes(q))) : rows.slice();
+    const { sort, dir } = estado;
+    out.sort((a, b) => {
+      const va = a[sort], vb = b[sort];
+      if (va == null && vb == null) return 0; if (va == null) return 1; if (vb == null) return -1;
+      return String(va).localeCompare(String(vb), 'es') * dir;
+    });
+    return out;
+  };
+
+  const renderTabla = (rows) => {
+    const vis = visiblesTabla(rows);
+    $('t-count').textContent = fN.format(vis.length);
+    $('t-body').replaceChildren(...vis.map((r) => {
+      const tr = el('tr');
+      COLS.forEach((k, i) => {
+        const td = el('td');
+        if (k === 'pieza' && r.url) { const a = el('a', '', r.pieza); a.href = r.url; a.target = '_blank'; a.rel = 'noopener'; td.appendChild(a); }
+        else td.textContent = k === 'fecha' ? (r.fecha ? fechaLarga(r.fecha, true) : 'Sin fecha') : r[k];
+        if (k === 'fecha' && r.atrasada) td.className = 'late-cell';
+        if (k === 'estado' && r.estado === 'Publicado') td.className = 'ok-cell';
+        if (i >= 4) td.classList.add('col-hide');
+        tr.appendChild(td);
+      });
+      return tr;
+    }));
+  };
+
+  // Eventos
+  for (const id of ['f-pais', 'f-mes', 'f-red']) $(id).addEventListener('change', () => { estado.filtro = { pais: $('f-pais').value, mes: $('f-mes').value, red: $('f-red').value }; render(); });
+  $('btn-limpiar').addEventListener('click', () => { estado.filtro = { pais: 'Todos', mes: 'Todos', red: 'Todas' }; render(); });
+  $('buscar').addEventListener('input', (e) => { estado.q = e.target.value; renderTabla(filtradas()); });
+  for (const th of document.querySelectorAll('th[data-col]')) {
+    th.querySelector('button').addEventListener('click', () => {
+      const col = th.dataset.col;
+      estado.dir = estado.sort === col ? -estado.dir : 1;
+      estado.sort = col;
+      for (const o of document.querySelectorAll('th[data-col]')) o.removeAttribute('aria-sort');
+      th.setAttribute('aria-sort', estado.dir === 1 ? 'ascending' : 'descending');
+      renderTabla(filtradas());
+    });
+  }
+  let ancho = window.innerWidth;
+  window.addEventListener('resize', () => { if ((ancho < 700) !== (window.innerWidth < 700)) renderCalendario(filtradas()); ancho = window.innerWidth; });
+
+  $('btn-csv').addEventListener('click', () => {
+    const cab = ['Pieza', 'Fecha', 'Estado', 'País', 'Marca / cuenta', 'Redes', 'Formato', 'Categoría', 'Atrasada', 'Alcance', 'Interacciones', 'Leads', 'Enlace Notion'];
+    const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+    const lineas = visiblesTabla(filtradas()).map((r) => [r.pieza, r.fecha || '', r.estado, r.pais, r.marca, r.redesTxt, r.formato, r.categoriasTxt, r.atrasada ? 'Sí' : 'No', r.alcance ?? '', r.interacciones ?? '', r.leads ?? '', r.url || ''].map(esc).join(';'));
+    const blob = new Blob(['﻿' + [cab.map(esc).join(';'), ...lineas].join('\r\n')], { type: 'text/csv;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'parrilla-contenidos-' + estado.hoy + '.csv';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+
+  // Carga de datos
+  const cargar = async () => {
+    try {
+      const res = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      estado.hoy = hoyBogota();
+      estado.piezas = (data.piezas || []).map((r) => normalizar(r, estado.hoy));
+      $('hoy').textContent = fechaLarga(estado.hoy, true);
+      $('actualizado').textContent = data.actualizado ? new Intl.DateTimeFormat('es-CO', { timeZone: 'America/Bogota', dateStyle: 'medium', timeStyle: 'short' }).format(new Date(data.actualizado)) : '—';
+      render();
+    } catch (e) {
+      $('lectura').textContent = 'Aún no hay datos. Ejecuta la tarea "Actualizar parrilla desde Notion" en la pestaña Actions del repositorio y recarga esta página en unos minutos.';
+    }
+  };
+  $('btn-recargar').addEventListener('click', cargar);
+  cargar();
+  setInterval(cargar, 15 * 60 * 1000);
+})();
+</script>
+</body>
+</html>
