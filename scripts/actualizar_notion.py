@@ -35,10 +35,23 @@ def post(url, body, version):
 
 
 def leer_todo():
-    # Primero la API actual (data sources); si no está disponible, la API clásica de bases de datos.
-    intentos = [
-        (f"https://api.notion.com/v1/data_sources/{DATA_SOURCE_ID}/query", "2025-09-03"),
+    # Busca por nombre las bases que la conexión puede ver (no depende del identificador).
+    intentos = []
+    try:
+        res = post("https://api.notion.com/v1/search", {"query": "PARRILLA", "filter": {"property": "object", "value": "database"}, "page_size": 50}, "2022-06-28")
+        bases = res.get("results", [])
+        titulo = lambda b: "".join(t.get("plain_text", "") for t in b.get("title", [])).upper()
+        bases.sort(key=lambda b: ("PARRILLA DE CONTENIDOS" not in titulo(b), b.get("last_edited_time", "")), reverse=False)
+        print("Bases visibles para la conexión: " + ", ".join(f"{titulo(b)} ({b['id']})" for b in bases), file=sys.stderr)
+        for b in bases:
+            if "PARRILLA" in titulo(b):
+                intentos.append((f"https://api.notion.com/v1/databases/{b['id']}/query", "2022-06-28"))
+                break
+    except urllib.error.HTTPError as e:
+        print(f"Búsqueda por nombre falló: {e.code} {e.read().decode('utf-8', 'replace')[:300]}", file=sys.stderr)
+    intentos += [
         (f"https://api.notion.com/v1/databases/{DATABASE_ID}/query", "2022-06-28"),
+        (f"https://api.notion.com/v1/data_sources/{DATA_SOURCE_ID}/query", "2025-09-03"),
     ]
     ultimo_error = None
     for url, version in intentos:
