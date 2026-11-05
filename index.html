@@ -144,7 +144,7 @@
   /* Calendario */
   .cal-tools { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  .seg button { font: inherit; font-size: 13px; border: 0; background: var(--field); color: var(--muted); padding: 6px 12px; cursor: pointer; }
+  .seg button { display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13px; border: 0; background: var(--field); color: var(--muted); padding: 6px 12px; cursor: pointer; }
   .seg button + button { border-left: 1px solid var(--line); }
   .seg button[aria-pressed="true"] { background: var(--navy); color: #fff; }
   .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12px; color: var(--muted); }
@@ -269,13 +269,16 @@
 
 
   <section id="sec-fechas" hidden>
-    <h2>Fechas comerciales clave</h2>
+    <h2>Fechas clave y festivos</h2>
     <article class="card" style="margin-top: 14px">
-      <p class="note">Fechas que mueven compras y envíos en nuestros mercados, con las piezas que tenemos planeadas en la semana previa y durante la fecha. Se ajustan por país y mes con los filtros de arriba.</p>
-      <div class="fk-legend">
-        <span><i class="sw" style="background:var(--amber)"></i>Comercial</span>
-        <span><i class="sw" style="background:var(--sky)"></i>Festivo</span>
-        <span><i class="sw" style="background:var(--st-grabar)"></i>Cultural</span>
+      <div class="cal-tools">
+        <p class="note" style="margin:0;max-width:44rem">Fechas comerciales que mueven compras y envíos, y festivos oficiales de cada país (día de descanso, ya trasladado cuando aplica), con las piezas planeadas en la semana previa y durante la fecha. Se ajustan por país y mes con los filtros de arriba.</p>
+        <div class="seg" role="group" aria-label="Tipo de fecha" id="fk-tipo">
+          <button type="button" data-tipo="todas" aria-pressed="true">Todas</button>
+          <button type="button" data-tipo="comercial" aria-pressed="false"><i class="sw" style="background:var(--amber)"></i> Comerciales</button>
+          <button type="button" data-tipo="festivo" aria-pressed="false"><i class="sw" style="background:var(--sky)"></i> Festivos</button>
+          <button type="button" data-tipo="cultural" aria-pressed="false"><i class="sw" style="background:var(--st-grabar)"></i> Culturales</button>
+        </div>
       </div>
       <div class="fk-grid" id="c-fechas"></div>
     </article>
@@ -567,14 +570,17 @@
   };
   const MESES_CORTOS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 
+  let tipoFechas = 'todas';
+  try { tipoFechas = localStorage.getItem('parrilla-tipo-fechas') || 'todas'; } catch (e) {}
   const renderFechas = (rows) => {
     const sec = $('sec-fechas');
     const host = $('c-fechas');
     const hoy = estado.hoy;
     const mes = estado.filtro.mes;
-    let lista = fechasDelPais().sort((a, b) => a.fecha.localeCompare(b.fecha));
+    for (const b of document.querySelectorAll('#fk-tipo button')) b.setAttribute('aria-pressed', String(b.dataset.tipo === tipoFechas));
+    let lista = fechasDelPais().filter((f) => tipoFechas === 'todas' || f.tipo === tipoFechas).sort((a, b) => a.fecha.localeCompare(b.fecha) || a.nombre.localeCompare(b.nombre));
     if (mes !== 'Todos' && mes !== 'sin_fecha') lista = lista.filter((f) => f.fecha.slice(0, 7) <= mes && f.fin.slice(0, 7) >= mes);
-    else lista = lista.filter((f) => f.fin >= hoy).slice(0, 8);
+    else lista = lista.filter((f) => f.fin >= hoy).slice(0, 12);
     sec.hidden = !estado.fechas.length;
     if (!lista.length) { host.replaceChildren(el('p', 'note', 'No hay fechas clave para este filtro.')); return; }
     host.replaceChildren(...lista.map((f) => {
@@ -598,6 +604,9 @@
       const pz = el('span', 'fk-pz' + (n === 0 && faltan >= 0 ? ' gap' : ''));
       pz.append(el('b', '', fN.format(n)), n === 1 ? ' pieza planeada alrededor de la fecha' : ' piezas planeadas alrededor de la fecha');
       foot.appendChild(pz);
+      const tipoTxt = { comercial: 'Comercial', festivo: 'Festivo', cultural: 'Cultural' }[f.tipo] || f.tipo;
+      const tt = el('span', 'tag', tipoTxt); tt.style.setProperty('--c', f.tipo === 'festivo' ? 'var(--sky)' : f.tipo === 'cultural' ? 'var(--st-grabar)' : '#b07a00');
+      foot.appendChild(tt);
       card.append(day, el('div', 'fk-name', f.nombre), when, tags, foot);
       return card;
     }));
@@ -723,6 +732,14 @@
       colorCal = b.dataset.color;
       try { localStorage.setItem('parrilla-color-cal', colorCal); } catch (e) {}
       renderCalendario(filtradas());
+    });
+  }
+
+  for (const b of document.querySelectorAll('#fk-tipo button')) {
+    b.addEventListener('click', () => {
+      tipoFechas = b.dataset.tipo;
+      try { localStorage.setItem('parrilla-tipo-fechas', tipoFechas); } catch (e) {}
+      renderFechas(filtradas());
     });
   }
 
