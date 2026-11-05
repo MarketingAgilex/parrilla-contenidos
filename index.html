@@ -6,56 +6,90 @@
 <title>Parrilla de contenidos · Ágilex</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --indigo: #383878; --amber: #f7b00f; --sky: #1f9ad6; --navy: #2b2b66; --green: #1f9d6b; --red: #d64545;
-    --st-idea: #8a8f98; --st-grabar: #7c5cd6; --st-editar: #e0603a; --st-correccion: #1f9ad6;
-    --st-publicar: #f2a01f; --st-publicado: #1f9d6b; --st-sin: #b8bcc4;
-    --bg: #eef2f7; --panel: #ffffff; --fg: #12192b; --muted: #5d6679; --line: #dde3ec; --soft: #eef1f6; --field: #f4f7fb;
-    --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 4px 14px rgba(16, 24, 40, .05);
-    --radius: 12px;
+    --indigo: #393a70; --amber: #fcb614; --sky: #2f8fd8; --navy: #393a70; --navy-dd: #1b1c3d; --green: #138a46; --red: #c0392b;
+    --st-idea: #9a9cb5; --st-grabar: #7c5cd6; --st-editar: #e0603a; --st-correccion: #2f8fd8;
+    --st-publicar: #f0a500; --st-publicado: #1baf7a; --st-sin: #c2c4d6;
+    --bg: #f2f3f8; --panel: #ffffff; --fg: #1c1d3a; --muted: #868aa3; --text2: #4b4d6b; --line: #e4e5ef; --soft: #edeef4; --field: #f7f8fb;
+    --shadow: 0 1px 3px rgba(28, 29, 58, .05);
+    --radius: 18px;
     --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --serif: "Source Serif 4", Georgia, serif;
+    --mont: "Montserrat", "Inter", sans-serif;
+    --serif: var(--mont);
   }
   :root[data-theme="dark"] {
-    --bg: #0f1420; --panel: #171e2d; --fg: #e8ecf4; --muted: #9aa4b8; --line: #2a3346; --soft: #222b3d; --field: #1d2536;
-    --shadow: 0 1px 2px rgba(0,0,0,.3);
+    --bg: #12132a; --panel: #1c1d3a; --fg: #ececf6; --muted: #9a9cb8; --text2: #c4c5e6; --line: #2e2f55; --soft: #26274a; --field: #222347;
+    --shadow: 0 1px 3px rgba(0,0,0,.35);
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; }
-  .page { max-width: 1400px; margin: 0 auto; padding: 24px 16px 48px; display: flex; flex-direction: column; gap: 18px; position: relative; }
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); min-width: 0; }
-  .head { position: relative; overflow: hidden; padding-top: 26px; }
-  .stripe { position: absolute; inset: 0 0 auto 0; height: 6px; display: flex; }
-  .stripe span { flex: 1; } .stripe span:nth-child(1) { background: var(--indigo); } .stripe span:nth-child(2) { background: var(--amber); } .stripe span:nth-child(3) { background: var(--sky); }
-  .head-row { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
-  .brand { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 18px 8px; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-  .brand img { display: block; width: 150px; height: auto; }
-  .brand-sub { font-size: 10px; font-weight: 600; color: #383878; text-transform: uppercase; letter-spacing: .16em; }
-  .head-text { flex: 1 1 22rem; min-width: 0; }
-  h1 { font-family: var(--serif); font-weight: 600; font-size: 1.65rem; margin: 0; line-height: 1.2; }
-  .sub { color: var(--muted); margin: 4px 0 0; }
-  .badge { display: inline-flex; gap: 6px; align-items: center; margin-top: 10px; background: var(--field); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: 12px; color: var(--muted); }
-  .badge b { color: var(--fg); }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
-  .actions { display: flex; flex-wrap: wrap; gap: 8px; }
-  .btn { font: inherit; font-size: 14px; color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; cursor: pointer; }
-  .btn:hover { border-color: var(--indigo); }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 14px; line-height: 1.5; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+
+  /* Barra de marca */
+  .brandbar { background: var(--panel); border-bottom: 1px solid var(--line); }
+  .brandbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+  .brandbar .logo { display: inline-flex; background: #fff; border-radius: 10px; padding: 4px 8px; }
+  .brandbar img { height: 42px; width: auto; display: block; }
+  .bar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .status { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text2); background: var(--field); border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; }
+  .status b { color: var(--fg); font-weight: 600; }
+  .status b, .status .nw { white-space: nowrap; }
+  @media (max-width: 560px) { .status { flex-wrap: wrap; row-gap: 2px; font-size: 11.5px; } .field { flex: 1 1 100%; } }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #22a05a; box-shadow: 0 0 0 3px #22a05a26; flex: none; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; }
+  .btn { font: inherit; font-size: 12.5px; font-weight: 600; color: var(--text2); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px; cursor: pointer; }
+  .btn:hover { border-color: var(--navy); color: var(--fg); }
   .btn-primary { background: var(--navy); border-color: var(--navy); color: #fff; }
-  .takeaway { margin: 16px 0 0; line-height: 1.55; }
+  .btn-primary:hover { color: #fff; background: var(--navy-dd); }
+
+  /* Hero */
+  .hero { background: radial-gradient(120% 140% at 85% 0%, #4a4b8c 0%, #393a70 38%, #1b1c3d 100%); color: #fff; padding: 34px 0 96px; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; right: -80px; bottom: -120px; width: 420px; height: 420px; border-radius: 50%; border: 56px solid rgba(252, 182, 20, .10); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; }
+  .eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); font-weight: 700; }
+  .hero h1 { font-family: var(--mont); font-size: 15px; font-weight: 600; color: #d6d7f0; margin: 10px 0 2px; }
+  .hero .total { font-family: var(--mont); font-weight: 800; font-size: 64px; line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .hero .total small { font-size: 18px; font-weight: 600; color: #c4c5e6; letter-spacing: 0; margin-left: 8px; }
+  .hero-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--amber); color: var(--navy-dd); font-weight: 800; font-family: var(--mont); font-size: 15px; padding: 7px 14px; border-radius: 999px; margin-top: 16px; }
+  .hero .from { color: #c4c5e6; font-size: 13.5px; margin-top: 12px; max-width: 34rem; line-height: 1.55; }
+  .hero .from b { color: #fff; }
+  .hero-panel { background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .12); border-radius: 18px; padding: 16px 18px; }
+  .hero-panel .t { font-size: 12px; color: #d6d7f0; font-weight: 600; margin-bottom: 10px; display: flex; justify-content: space-between; gap: 10px; }
+  .hp-list { display: flex; flex-direction: column; gap: 8px; min-height: 9rem; }
+  .hp-row { display: grid; grid-template-columns: 4.2rem 1fr auto; gap: 12px; align-items: center; background: rgba(255, 255, 255, .05); border-radius: 12px; padding: 8px 12px; }
+  .hp-date { font-family: var(--mont); font-weight: 700; font-size: 12px; color: var(--amber); line-height: 1.2; }
+  .hp-date span { display: block; color: #c4c5e6; font-weight: 600; font-size: 11px; }
+  .hp-name { font-size: 13px; font-weight: 600; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hp-meta { display: flex; gap: 4px; align-items: center; }
+  .hp-meta .tag { background: rgba(255, 255, 255, .14); color: #fff; }
+  .hp-empty { color: #c4c5e6; font-size: 13px; padding: 20px 0; text-align: center; }
+
+  main.page { max-width: 1280px; margin: -60px auto 0; padding: 0 16px 32px; display: flex; flex-direction: column; gap: 16px; position: relative; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); min-width: 0; }
   .filters { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
   .field { display: flex; flex-direction: column; gap: 5px; flex: 0 1 16rem; min-width: 11rem; }
-  .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
-  select, input[type=search] { font: inherit; font-size: 14px; color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
-  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: 14px; }
-  .kpi { border-top: 4px solid var(--indigo); padding: 14px 18px; display: flex; flex-direction: column; gap: 3px; }
-  .kpi:nth-child(2) { border-top-color: var(--amber); } .kpi:nth-child(3) { border-top-color: var(--green); } .kpi:nth-child(4) { border-top-color: var(--red); } .kpi:nth-child(5) { border-top-color: var(--sky); } .kpi:nth-child(6) { border-top-color: var(--navy); }
-  .kpi-value { font-family: var(--serif); font-size: 2.3rem; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .label { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  select, input[type=search] { font: inherit; font-size: 13.5px; color: var(--fg); background: var(--field); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 16px; }
+  .kpi { display: flex; gap: 14px; align-items: center; padding: 18px; }
+  .kpi .ico { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; flex: none; background: #ececf6; color: var(--navy); }
+  :root[data-theme="dark"] .kpi .ico { background: #2e2f55; color: #d6d7f0; }
+  .kpi.y .ico { background: #fff1cc; color: #b07a00; }
+  .kpi.g .ico { background: #e4f5ea; color: var(--green); }
+  .kpi.r .ico { background: #fdecea; color: var(--red); }
+  .kpi.b .ico { background: #e3f0fb; color: var(--sky); }
+  .kpi-body { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+  .kpi-value { font-family: var(--mont); font-size: 26px; font-weight: 800; color: var(--navy); line-height: 1.15; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  :root[data-theme="dark"] .kpi-value { color: #fff; }
   .kpi-late .kpi-value { color: var(--red); }
-  .kpi-note { font-size: 12px; color: var(--muted); } .kpi-note b { color: var(--fg); }
-  h2 { font-size: 1.1rem; font-weight: 600; margin: 8px 0 0; }
-  h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+  :root[data-theme="dark"] .kpi-late .kpi-value { color: #ff8a7a; }
+  .kpi-note { font-size: 12px; color: var(--text2); } .kpi-note b { color: var(--fg); }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .hero .total { font-size: 52px; } }
+  h2 { font-family: var(--mont); font-size: 17px; font-weight: 700; color: var(--navy); margin: 10px 0 0; }
+  h3 { font-family: var(--mont); font-size: 15px; font-weight: 700; color: var(--navy); margin: 0; }
+  :root[data-theme="dark"] h2, :root[data-theme="dark"] h3 { color: #fff; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 14px; }
   .note { font-size: 12px; color: var(--muted); margin: 4px 0 14px; line-height: 1.45; }
   .bars { display: flex; flex-direction: column; gap: 9px; position: relative; }
@@ -77,6 +111,7 @@
   .tip .k { color: var(--muted); }
   /* Etiquetas compartidas: país, red social, estado */
   .tag { --c: var(--muted); display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; line-height: 1.5; padding: 1px 8px; border-radius: 999px; white-space: nowrap; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); }
+  :root[data-theme="dark"] .tag { color: color-mix(in srgb, var(--c) 45%, #fff); background: color-mix(in srgb, var(--c) 30%, transparent); }
   .tag-dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
   .tag-muted { --c: var(--muted); font-weight: 500; }
   .tag-late { --c: var(--red); }
@@ -90,7 +125,8 @@
   .fk.tipo-festivo { --c: var(--sky); } .fk.tipo-cultural { --c: var(--st-grabar); }
   .fk.now { box-shadow: inset 0 0 0 1px var(--c); }
   .fk-day { grid-row: span 3; text-align: center; min-width: 3.2rem; }
-  .fk-num { font-family: var(--serif); font-size: 2rem; line-height: 1; }
+  .fk-num { font-family: var(--mont); font-weight: 800; font-size: 1.9rem; line-height: 1; color: var(--navy); letter-spacing: -.02em; }
+  :root[data-theme="dark"] .fk-num { color: #fff; }
   .fk-mon { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-top: 2px; }
   .fk-name { font-weight: 700; font-size: 14px; line-height: 1.25; }
   .fk-when { font-size: 12px; color: var(--muted); }
@@ -164,25 +200,33 @@
 </style>
 </head>
 <body>
-<div class="page" id="app">
-
-  <header class="card head">
-    <div class="stripe"><span></span><span></span><span></span></div>
-    <div class="head-row">
-      <div class="brand"><img src="logo.png" alt="Ágilex" width="150" height="51"><span class="brand-sub">Marketing</span></div>
-      <div class="head-text">
-        <h1>Parrilla de contenidos · Tablero de gestión</h1>
-        <p class="sub">Planeación, producción y desempeño del contenido orgánico por país, red social y formato.</p>
-        <span class="badge"><span class="dot"></span>Fuente: Notion · Datos actualizados: <b id="actualizado">—</b> · Corte: <b id="hoy">—</b></span>
-      </div>
-      <div class="actions">
-        <button class="btn btn-primary" id="btn-csv" type="button">⬇ Descargar CSV</button>
-        <button class="btn" id="btn-recargar" type="button">↻ Recargar</button>
-        <button class="btn" id="btn-tema" type="button">Modo oscuro</button>
-      </div>
+<div class="brandbar"><div class="wrap">
+  <span class="logo"><img src="logo.png" alt="Ágilex" width="124" height="42"></span>
+  <div class="bar-right">
+    <span class="status"><span class="dot"></span>Notion · actualizado <b id="actualizado">—</b> · corte <b id="hoy">—</b></span>
+    <div class="actions">
+      <button class="btn btn-primary" id="btn-csv" type="button">⬇ Descargar CSV</button>
+      <button class="btn" id="btn-recargar" type="button">↻ Recargar</button>
+      <button class="btn" id="btn-tema" type="button">Modo oscuro</button>
     </div>
-    <p class="takeaway" id="lectura">Cargando datos…</p>
-  </header>
+  </div>
+</div></div>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">Parrilla de contenidos · Tablero de gestión</div>
+    <h1>Contenido orgánico planeado Ágilex</h1>
+    <div class="total"><span id="h-total">—</span><small>piezas en la parrilla</small></div>
+    <div class="hero-pill"><span id="h-pill">—</span></div>
+    <p class="from" id="lectura">Cargando datos…</p>
+  </div>
+  <div class="hero-panel">
+    <div class="t"><span>Próximas publicaciones · 7 días</span><span id="h-prox-n"></span></div>
+    <div class="hp-list" id="h-prox"></div>
+  </div>
+</div></section>
+
+<main class="page" id="app">
 
   <section class="card filters" aria-label="Filtros">
     <div class="field"><label class="label" for="f-pais">País</label><select id="f-pais"></select></div>
@@ -192,12 +236,11 @@
   </section>
 
   <section class="kpis">
-    <div class="card kpi"><span class="label">Piezas en parrilla</span><span class="kpi-value" id="k-total">—</span><span class="kpi-note">Todo lo registrado en Notion</span></div>
-    <div class="card kpi"><span class="label">Programadas</span><span class="kpi-value" id="k-prog">—</span><span class="kpi-note"><b id="k-pctfecha">—</b> del total tiene fecha</span></div>
-    <div class="card kpi"><span class="label">Publicadas</span><span class="kpi-value" id="k-pub">—</span><span class="kpi-note">Cumplimiento <b id="k-cumpl">—</b></span></div>
-    <div class="card kpi kpi-late"><span class="label">Atrasadas</span><span class="kpi-value" id="k-atr">—</span><span class="kpi-note">Fecha vencida sin marcar como publicada</span></div>
-    <div class="card kpi"><span class="label">Próximos 7 días</span><span class="kpi-value" id="k-prox">—</span><span class="kpi-note">Piezas que salen esta semana</span></div>
-    <div class="card kpi"><span class="label">Banco sin fecha</span><span class="kpi-value" id="k-sinf">—</span><span class="kpi-note">Contenido listo para programar</span></div>
+    <div class="card kpi "><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div class="kpi-body"><span class="label">Programadas</span><span class="kpi-value" id="k-prog">—</span><span class="kpi-note"><b id="k-pctfecha">—</b> del total tiene fecha</span></div></div>
+    <div class="card kpi g"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16 9.8"/></svg></div><div class="kpi-body"><span class="label">Publicadas</span><span class="kpi-value" id="k-pub">—</span><span class="kpi-note">Cumplimiento <b id="k-cumpl">—</b></span></div></div>
+    <div class="card kpi r kpi-late"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/></svg></div><div class="kpi-body"><span class="label">Atrasadas</span><span class="kpi-value" id="k-atr">—</span><span class="kpi-note">Fecha vencida sin publicar</span></div></div>
+    <div class="card kpi b"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div class="kpi-body"><span class="label">Próximos 7 días</span><span class="kpi-value" id="k-prox">—</span><span class="kpi-note">Piezas que salen esta semana</span></div></div>
+    <div class="card kpi y"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l3-8h12l3 8v6H3z"/><path d="M3 13h5l1 2h6l1-2h5"/></svg></div><div class="kpi-body"><span class="label">Banco sin fecha</span><span class="kpi-value" id="k-sinf">—</span><span class="kpi-note">Listo para programar</span></div></div>
   </section>
 
   <h2>Operación de contenido</h2>
@@ -274,7 +317,7 @@
   </article>
 
   <footer>Ágilex Express S.A.S. · Marketing · Tablero alimentado automáticamente desde la parrilla de contenidos en Notion.</footer>
-</div>
+</main>
 
 <script>
 (() => {
@@ -282,7 +325,7 @@
   const MARCAS = ['Ágilbox', 'Comerciantex', 'TikTok Jose'];
   const ORDEN_ESTADOS = ['Idea', 'Por grabar', 'Por editar', 'En corrección', 'Por publicar', 'Publicado', 'Sin estado'];
   const COLOR_ESTADO = { 'Idea': 'var(--st-idea)', 'Por grabar': 'var(--st-grabar)', 'Por editar': 'var(--st-editar)', 'En corrección': 'var(--st-correccion)', 'Por publicar': 'var(--st-publicar)', 'Publicado': 'var(--st-publicado)', 'Sin estado': 'var(--st-sin)' };
-  const COLOR_DIM = { red: 'var(--indigo)', categoria: 'var(--amber)', formato: 'var(--sky)', marca: 'var(--navy)', pais: 'var(--green)', servicio: 'var(--st-grabar)' };
+  const COLOR_DIM = { red: '#393a70', categoria: '#fcb614', formato: '#2f8fd8', marca: '#8e90c4', pais: '#1baf7a', servicio: '#e2729d' };
   const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
   const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
   const fN = new Intl.NumberFormat('es-CO');
@@ -402,10 +445,12 @@
     const cumpl = pct(pub.length, pub.length + atr);
     const setT = (id, v, fmt) => { $(id).textContent = v == null ? '—' : (fmt || fN.format)(v); };
 
-    setT('k-total', n); setT('k-prog', prog); setT('k-pub', pub.length); setT('k-atr', atr);
+    setT('h-total', n); setT('k-prog', prog); setT('k-pub', pub.length); setT('k-atr', atr);
     setT('k-prox', c((r) => r.proxima)); setT('k-sinf', n - prog);
     setT('k-pctfecha', pct(prog, n), fP.format); setT('k-cumpl', cumpl, fP.format);
 
+    $('h-pill').textContent = '▲ ' + fN.format(prog) + ' programadas' + (n ? ' · ' + fP.format(prog / n) + ' con fecha' : '');
+    renderHero(rows);
     const lectura = $('lectura');
     lectura.replaceChildren();
     const b = (t) => el('b', '', t);
@@ -460,7 +505,7 @@
   };
 
   // Etiquetas visuales de país, red y estado
-  const PAIS_INFO = { 'Colombia': ['CO', '#e8960c'], 'Ecuador': ['EC', '#1f9ad6'], 'México': ['MX', '#1f9d6b'], 'USA': ['US', '#3434c0'], 'Sin país': ['Sin país', '#8a8f98'] };
+  const PAIS_INFO = { 'Colombia': ['CO', '#393a70'], 'Ecuador': ['EC', '#c98a00'], 'México': ['MX', '#1baf7a'], 'USA': ['US', '#e2729d'], 'Sin país': ['Sin país', '#8a8f98'] };
   const RED_INFO = { 'Instagram': ['IG', '#d6249f'], 'TikTok': ['TT', '#25282e'], 'Facebook': ['FB', '#1877f2'], 'YouTube': ['YT', '#e62117'], 'LinkedIn': ['IN', '#0a66c2'] };
   const tagPais = (p, corto) => { const [cod, col] = PAIS_INFO[p] || [p, '#8a8f98']; const t = el('span', 'tag', corto ? cod : p); t.style.setProperty('--c', col); t.title = p; return t; };
   const tagEstado = (e) => { const t = el('span', 'tag tag-dot', e); t.style.setProperty('--c', COLOR_ESTADO[e] || 'var(--st-sin)'); return t; };
@@ -486,6 +531,28 @@
     for (const b of document.querySelectorAll('.seg button')) b.setAttribute('aria-pressed', String(b.dataset.color === colorCal));
     const redes = Object.keys(RED_INFO).filter((r) => piezas.some((x) => x.redes.includes(r)));
     $('c-nets').replaceChildren(...redes.map((r) => { const s = el('span'); s.append(netsDe([r]), r); return s; }));
+  };
+
+  // Próximas publicaciones en el hero
+  const renderHero = (rows) => {
+    const prox = rows.filter((r) => r.proxima).sort((a, b) => a.fecha.localeCompare(b.fecha) || a.pieza.localeCompare(b.pieza));
+    $('h-prox-n').textContent = prox.length ? fN.format(prox.length) + (prox.length === 1 ? ' pieza' : ' piezas') : '';
+    const host = $('h-prox');
+    if (!prox.length) { host.replaceChildren(el('div', 'hp-empty', 'No hay piezas programadas para los próximos 7 días.')); return; }
+    const DC = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+    const MC = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+    const filas = prox.slice(0, 5).map((r) => {
+      const d = new Date(r.fecha + 'T12:00:00Z');
+      const row = el('div', 'hp-row');
+      const fd = el('div', 'hp-date', r.fecha === estado.hoy ? 'Hoy' : DC[d.getUTCDay()][0].toUpperCase() + DC[d.getUTCDay()].slice(1));
+      fd.appendChild(el('span', '', d.getUTCDate() + ' ' + MC[d.getUTCMonth()]));
+      const meta = el('div', 'hp-meta');
+      for (const p of r.paisesN) meta.appendChild(el('span', 'tag', (PAIS_INFO[p] || [p])[0]));
+      row.append(fd, el('div', 'hp-name', r.pieza), meta);
+      return row;
+    });
+    if (prox.length > 5) filas.push(el('div', 'hp-empty', '+ ' + fN.format(prox.length - 5) + ' más en el calendario'));
+    host.replaceChildren(...filas);
   };
 
   // Fechas comerciales clave
