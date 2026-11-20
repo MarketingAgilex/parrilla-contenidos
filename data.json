@@ -1,7 +1,372 @@
 {
- "actualizado": "2026-11-20T17:13:38+00:00",
+ "actualizado": "2026-11-20T18:10:07+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
+  {
+   "id": "3e3d8f93-5b2c-80cd-b20c-c320058e7c74",
+   "url": "https://app.notion.com/p/Gremio-Textiles-3e3d8f935b2c80cdb20cc320058e7c74",
+   "pieza": "Gremio - Textiles",
+   "fecha": "2026-11-20",
+   "estado": "Programado",
+   "formato": "Imagen",
+   "categorias": [
+    "Venta"
+   ],
+   "redes": [
+    "Instagram",
+    "Facebook",
+    "TikTok"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "401d8f93-5b2c-80b3-982d-c810168e5d34",
+   "url": "https://app.notion.com/p/Ruta-RD-401d8f935b2c80b3982dc810168e5d34",
+   "pieza": "Ruta RD",
+   "fecha": "2026-11-23",
+   "estado": "Programado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook",
+    "YouTube"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-800f-aa62-fa039cfdf8a4",
+   "url": "https://app.notion.com/p/Ruta-CR-1-41ed8f935b2c800faa62fa039cfdf8a4",
+   "pieza": "Ruta CR 1",
+   "fecha": "2026-11-24",
+   "estado": "Programado",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80b3-8548-e22ae31676f1",
+   "url": "https://app.notion.com/p/Ruta-CR-2-41ed8f935b2c80b38548e22ae31676f1",
+   "pieza": "Ruta CR 2",
+   "fecha": "2026-11-24",
+   "estado": "Programado",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80a6-922a-d1e843f69f1f",
+   "url": "https://app.notion.com/p/Ruta-CR-3-41ed8f935b2c80a6922ad1e843f69f1f",
+   "pieza": "Ruta CR 3",
+   "fecha": "2026-11-24",
+   "estado": "Programado",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "401d8f93-5b2c-80a1-9f9a-ef05c8cdcdc5",
+   "url": "https://app.notion.com/p/Ruta-MX-401d8f935b2c80a19f9aef05c8cdcdc5",
+   "pieza": "Ruta MX",
+   "fecha": "2026-11-26",
+   "estado": "Programado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook",
+    "YouTube"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-801a-baee-d085f3ac8466",
+   "url": "https://app.notion.com/p/Visita-clientes-FELIPE-41ed8f935b2c801abaeed085f3ac8466",
+   "pieza": "Visita clientes FELIPE",
+   "fecha": "2026-11-27",
+   "estado": "Programado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-804b-8bcc-fbef16dddc22",
+   "url": "https://app.notion.com/p/Navidad-1-41ed8f935b2c804b8bccfbef16dddc22",
+   "pieza": "Navidad 1",
+   "fecha": "2026-11-30",
+   "estado": "Programado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8078-87e9-cd705519479f",
+   "url": "https://app.notion.com/p/Temporada-dic-CO-41ed8f935b2c807887e9cd705519479f",
+   "pieza": "Temporada dic CO",
+   "fecha": "2026-12-01",
+   "estado": "Programado",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "401d8f93-5b2c-80d3-a461-e52e3ca4f142",
+   "url": "https://app.notion.com/p/Pymes-general-401d8f935b2c80d3a461e52e3ca4f142",
+   "pieza": "Pymes general",
+   "fecha": "2026-12-03",
+   "estado": "Programado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook",
+    "YouTube"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-809c-aee9-e02c13fd38d2",
+   "url": "https://app.notion.com/p/Temporada-dic-CO-2-41ed8f935b2c809caee9e02c13fd38d2",
+   "pieza": "Temporada dic CO 2",
+   "fecha": "2026-12-04",
+   "estado": "Programado",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8067-bfae-ef73215ff51c",
+   "url": "https://app.notion.com/p/Barranquilla-41ed8f935b2c8067bfaeef73215ff51c",
+   "pieza": "Barranquilla",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8029-938a-cc5a0353dffb",
+   "url": "https://app.notion.com/p/Black-friday-1-41ed8f935b2c8029938acc5a0353dffb",
+   "pieza": "Black friday 1",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80c1-b307-cf98013c6402",
+   "url": "https://app.notion.com/p/Black-friday-2-41ed8f935b2c80c1b307cf98013c6402",
+   "pieza": "Black friday 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
   {
    "id": "409d8f93-5b2c-80bf-9d1a-fb0ddb231482",
    "url": "https://app.notion.com/p/Bodega-China-1-409d8f935b2c80bf9d1afb0ddb231482",
@@ -55,19 +420,157 @@
    "leads": null
   },
   {
+   "id": "41ed8f93-5b2c-80fd-a0b8-e8a04de7f845",
+   "url": "https://app.notion.com/p/Bogot-41ed8f935b2c80fda0b8e8a04de7f845",
+   "pieza": "Bogotá",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8049-bfed-d564284e0afb",
+   "url": "https://app.notion.com/p/Bucaramanga-41ed8f935b2c8049bfedd564284e0afb",
+   "pieza": "Bucaramanga",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80a7-a60c-e3696f796e23",
+   "url": "https://app.notion.com/p/Bucaramanga-41ed8f935b2c80a7a60ce3696f796e23",
+   "pieza": "Bucaramanga",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8094-826d-cb4172cef614",
+   "url": "https://app.notion.com/p/Buen-fin-41ed8f935b2c8094826dcb4172cef614",
+   "pieza": "Buen fin",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia",
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
    "id": "41ed8f93-5b2c-808c-b5c6-df63e10c981b",
    "url": "https://app.notion.com/p/Buen-fin-MX-41ed8f935b2c808cb5c6df63e10c981b",
    "pieza": "Buen fin MX",
    "fecha": null,
    "estado": "Publicado",
-   "formato": null,
+   "formato": "Imagen",
    "categorias": [],
-   "redes": [],
-   "paises": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
    "marca": null,
    "servicios": [],
    "etapa": null,
-   "tiene_referencia": 0,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8008-ba05-f22be245d3bc",
+   "url": "https://app.notion.com/p/Cali-41ed8f935b2c8008ba05f22be245d3bc",
+   "pieza": "Cali",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
@@ -171,7 +674,333 @@
    "marca": null,
    "servicios": [],
    "etapa": null,
-   "tiene_referencia": 0,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80c0-b0a1-e15101c126fc",
+   "url": "https://app.notion.com/p/Casillero-USA-CO-41ed8f935b2c80c0b0a1e15101c126fc",
+   "pieza": "Casillero USA - CO",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80a1-b120-cfc5581fd5a2",
+   "url": "https://app.notion.com/p/Casillero-USA-CO-41ed8f935b2c80a1b120cfc5581fd5a2",
+   "pieza": "Casillero USA - CO",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-809c-80d3-dd876496134f",
+   "url": "https://app.notion.com/p/Casillero-USA-GU-41ed8f935b2c809c80d3dd876496134f",
+   "pieza": "Casillero USA - GU",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80fb-affc-e8a1a89a7b37",
+   "url": "https://app.notion.com/p/Casillero-USA-GU-41ed8f935b2c80fbaffce8a1a89a7b37",
+   "pieza": "Casillero USA - GU",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80a5-bcc8-c5413a58383a",
+   "url": "https://app.notion.com/p/Casillero-USA-LATAM-1-41ed8f935b2c80a5bcc8c5413a58383a",
+   "pieza": "Casillero USA - LATAM 1",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-808d-adf2-c0d278103ed8",
+   "url": "https://app.notion.com/p/Casillero-USA-LATAM-2-41ed8f935b2c808dadf2c0d278103ed8",
+   "pieza": "Casillero USA - LATAM 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8023-b6f2-ef7dda3be36e",
+   "url": "https://app.notion.com/p/Casillero-USA-MX-1-41ed8f935b2c8023b6f2ef7dda3be36e",
+   "pieza": "Casillero USA - MX 1",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8097-ad55-e63c963ad5ca",
+   "url": "https://app.notion.com/p/Casillero-USA-MX-2-41ed8f935b2c8097ad55e63c963ad5ca",
+   "pieza": "Casillero USA - MX 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80d8-9a8c-dc095292502d",
+   "url": "https://app.notion.com/p/Casillero-USA-PA-1-41ed8f935b2c80d89a8cdc095292502d",
+   "pieza": "Casillero USA - PA 1",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-805a-80fb-c93707ec9c1e",
+   "url": "https://app.notion.com/p/Casillero-USA-PA-2-41ed8f935b2c805a80fbc93707ec9c1e",
+   "pieza": "Casillero USA - PA 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80c7-8b4f-e2bcf751eb2e",
+   "url": "https://app.notion.com/p/Casillero-USA-RD-1-41ed8f935b2c80c78b4fe2bcf751eb2e",
+   "pieza": "Casillero USA - RD 1",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8061-94db-db1b18591530",
+   "url": "https://app.notion.com/p/Casillero-USA-RD-2-41ed8f935b2c806194dbdb1b18591530",
+   "pieza": "Casillero USA - RD 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-809c-b87e-e89d5fcd946b",
+   "url": "https://app.notion.com/p/Cibermonday-41ed8f935b2c809cb87ee89d5fcd946b",
+   "pieza": "Cibermonday",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Carrusel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook",
+    "YouTube"
+   ],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
@@ -190,6 +1019,95 @@
     "TikTok",
     "Facebook",
     "YouTube"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8039-9dcb-c9f2133640eb",
+   "url": "https://app.notion.com/p/Cristina-Warner-1-41ed8f935b2c80399dcbc9f2133640eb",
+   "pieza": "Cristina Warner 1",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": null,
+   "categorias": [],
+   "redes": [],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8094-8912-e5db4a647582",
+   "url": "https://app.notion.com/p/Cristina-Warner-2-41ed8f935b2c80948912e5db4a647582",
+   "pieza": "Cristina Warner 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": null,
+   "categorias": [],
+   "redes": [],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80a3-8517-f2d6256b9ac7",
+   "url": "https://app.notion.com/p/Cristina-Warner-3-41ed8f935b2c80a38517f2d6256b9ac7",
+   "pieza": "Cristina Warner 3",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": null,
+   "categorias": [],
+   "redes": [],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8084-9a77-ff7d33343890",
+   "url": "https://app.notion.com/p/Cucut-41ed8f935b2c80849a77ff7d33343890",
+   "pieza": "Cucutá",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
    ],
    "paises": [
     "Colombia"
@@ -265,6 +1183,33 @@
    "categorias": [
     "Testimonio"
    ],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80de-b58f-da1bf70458fb",
+   "url": "https://app.notion.com/p/Entrevista-Fajarate-41ed8f935b2c80deb58fda1bf70458fb",
+   "pieza": "Entrevista Fajarate",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
    "redes": [
     "Instagram",
     "TikTok",
@@ -483,33 +1428,6 @@
    "leads": null
   },
   {
-   "id": "3e3d8f93-5b2c-80cd-b20c-c320058e7c74",
-   "url": "https://app.notion.com/p/Gremio-Textiles-3e3d8f935b2c80cdb20cc320058e7c74",
-   "pieza": "Gremio - Textiles",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Imagen",
-   "categorias": [
-    "Venta"
-   ],
-   "redes": [
-    "Instagram",
-    "Facebook",
-    "TikTok"
-   ],
-   "paises": [
-    "Colombia"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 0,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
    "id": "3e6d8f93-5b2c-80e5-833b-d1e453f9e772",
    "url": "https://app.notion.com/p/Gui-n-Viral-general-3e6d8f935b2c80e5833bd1e453f9e772",
    "pieza": "Guión “Viral” general",
@@ -696,6 +1614,32 @@
    "leads": null
   },
   {
+   "id": "41ed8f93-5b2c-806f-80c6-dc1d70ebf28e",
+   "url": "https://app.notion.com/p/Medell-n-41ed8f935b2c806f80c6dc1d70ebf28e",
+   "pieza": "Medellín",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
    "id": "3e2d8f93-5b2c-8090-916e-de6f00eb3f8b",
    "url": "https://app.notion.com/p/Mito-o-realidad-FAJARTE-3e2d8f935b2c8090916ede6f00eb3f8b",
    "pieza": "Mito o realidad FAJARTE",
@@ -726,9 +1670,9 @@
    "leads": null
   },
   {
-   "id": "401d8f93-5b2c-80d3-a461-e52e3ca4f142",
-   "url": "https://app.notion.com/p/Pymes-general-401d8f935b2c80d3a461e52e3ca4f142",
-   "pieza": "Pymes general",
+   "id": "41ed8f93-5b2c-8097-bb31-cc4682ce5be5",
+   "url": "https://app.notion.com/p/Navidad-2-41ed8f935b2c8097bb31cc4682ce5be5",
+   "pieza": "Navidad 2",
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
@@ -736,11 +1680,323 @@
    "redes": [
     "Instagram",
     "TikTok",
-    "Facebook",
-    "YouTube"
+    "YouTube",
+    "Facebook"
    ],
    "paises": [
     "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80cd-ad37-cd4b71475372",
+   "url": "https://app.notion.com/p/Pereira-41ed8f935b2c80cdad37cd4b71475372",
+   "pieza": "Pereira",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8085-b672-f12d4f2ba838",
+   "url": "https://app.notion.com/p/Pymes-CO-41ed8f935b2c8085b672f12d4f2ba838",
+   "pieza": "Pymes CO",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Carrusel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80cd-98f7-ca323ea468de",
+   "url": "https://app.notion.com/p/Pymes-EC-1-41ed8f935b2c80cd98f7ca323ea468de",
+   "pieza": "Pymes EC 1",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80a0-92b1-eec23f23f034",
+   "url": "https://app.notion.com/p/Pymes-EC-2-41ed8f935b2c80a092b1eec23f23f034",
+   "pieza": "Pymes EC 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-804c-9754-d5ffe46c03af",
+   "url": "https://app.notion.com/p/Pymes-EC-3-41ed8f935b2c804c9754d5ffe46c03af",
+   "pieza": "Pymes EC 3",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8068-bd4d-f561ac645d45",
+   "url": "https://app.notion.com/p/Pymes-EC-4-41ed8f935b2c8068bd4df561ac645d45",
+   "pieza": "Pymes EC 4",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8091-a04a-d205172f704c",
+   "url": "https://app.notion.com/p/Pymes-EC-5-41ed8f935b2c8091a04ad205172f704c",
+   "pieza": "Pymes EC 5",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8077-a44d-d20adae2f01d",
+   "url": "https://app.notion.com/p/Pymes-MX-1-41ed8f935b2c8077a44dd20adae2f01d",
+   "pieza": "Pymes MX 1",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80fc-a227-ee9f82880aeb",
+   "url": "https://app.notion.com/p/Pymes-MX-2-41ed8f935b2c80fca227ee9f82880aeb",
+   "pieza": "Pymes MX 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-801d-adbe-efff07bac08e",
+   "url": "https://app.notion.com/p/Pymes-MX-3-41ed8f935b2c801dadbeefff07bac08e",
+   "pieza": "Pymes MX 3",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80f5-a122-f0d1f424c47f",
+   "url": "https://app.notion.com/p/Pymes-MX-4-41ed8f935b2c80f5a122f0d1f424c47f",
+   "pieza": "Pymes MX 4",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8011-a269-c18116cb214b",
+   "url": "https://app.notion.com/p/Pymes-MX-5-1-41ed8f935b2c8011a269c18116cb214b",
+   "pieza": "Pymes MX 5 (1)",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
    ],
    "marca": null,
    "servicios": [],
@@ -764,58 +2020,6 @@
     "TikTok",
     "YouTube",
     "Facebook"
-   ],
-   "paises": [
-    "Colombia"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 1,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-80a1-9f9a-ef05c8cdcdc5",
-   "url": "https://app.notion.com/p/Ruta-MX-401d8f935b2c80a19f9aef05c8cdcdc5",
-   "pieza": "Ruta MX",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "Colombia"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 1,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-80b3-982d-c810168e5d34",
-   "url": "https://app.notion.com/p/Ruta-RD-401d8f935b2c80b3982dc810168e5d34",
-   "pieza": "Ruta RD",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
    ],
    "paises": [
     "Colombia"
@@ -860,7 +2064,7 @@
    "url": "https://app.notion.com/p/Tarifa-emprendedores-3e6d8f935b2c803896dce16d0e8191b0",
    "pieza": "Tarifa emprendedores",
    "fecha": null,
-   "estado": "En corrección",
+   "estado": "Por publicar",
    "formato": "Reel",
    "categorias": [],
    "redes": [
@@ -876,6 +2080,33 @@
    "servicios": [],
    "etapa": null,
    "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8093-b0f0-d8f384bdce6c",
+   "url": "https://app.notion.com/p/Temporada-dic-CO-3-41ed8f935b2c8093b0f0d8f384bdce6c",
+   "pieza": "Temporada dic CO 3",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
@@ -1064,6 +2295,318 @@
    "leads": null
   },
   {
+   "id": "41ed8f93-5b2c-80cf-8c74-fc93022bbea7",
+   "url": "https://app.notion.com/p/Video-Guayaquil-41ed8f935b2c80cf8c74fc93022bbea7",
+   "pieza": "Video Guayaquil",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-806a-beef-f8fe2defa22e",
+   "url": "https://app.notion.com/p/Video-Guayaquil-2-41ed8f935b2c806abeeff8fe2defa22e",
+   "pieza": "Video Guayaquil 2",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80df-ada0-cb168ed0983b",
+   "url": "https://app.notion.com/p/Video-Guayaquil-3-41ed8f935b2c80dfada0cb168ed0983b",
+   "pieza": "Video Guayaquil 3",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80f3-b8ee-d0bd08048db1",
+   "url": "https://app.notion.com/p/Video-Guayaquil-4-41ed8f935b2c80f3b8eed0bd08048db1",
+   "pieza": "Video Guayaquil 4",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80c2-af19-c912702c45c9",
+   "url": "https://app.notion.com/p/Video-Guayaquil-5-41ed8f935b2c80c2af19c912702c45c9",
+   "pieza": "Video Guayaquil 5",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-806b-b3fe-fd21a0068486",
+   "url": "https://app.notion.com/p/Video-Guayaquil-6-41ed8f935b2c806bb3fefd21a0068486",
+   "pieza": "Video Guayaquil 6",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-801c-948e-f049d5bfb6be",
+   "url": "https://app.notion.com/p/Video-QUITO-1-41ed8f935b2c801c948ef049d5bfb6be",
+   "pieza": "Video QUITO 1",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80f6-b930-c189e41e7ec7",
+   "url": "https://app.notion.com/p/Video-QUITO-2-41ed8f935b2c80f6b930c189e41e7ec7",
+   "pieza": "Video QUITO 2",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-802f-bcf1-d834b11779d3",
+   "url": "https://app.notion.com/p/Video-QUITO-3-41ed8f935b2c802fbcf1d834b11779d3",
+   "pieza": "Video QUITO 3",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80be-8be5-ccafe754c41a",
+   "url": "https://app.notion.com/p/Video-QUITO-4-41ed8f935b2c80be8be5ccafe754c41a",
+   "pieza": "Video QUITO 4",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8050-af09-f9c415e0dd66",
+   "url": "https://app.notion.com/p/Video-QUITO-5-41ed8f935b2c8050af09f9c415e0dd66",
+   "pieza": "Video QUITO 5",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-8078-97e3-fb252b48bc9a",
+   "url": "https://app.notion.com/p/Video-QUITO-6-41ed8f935b2c807897e3fb252b48bc9a",
+   "pieza": "Video QUITO 6",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ecuador"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
    "id": "4b1d8f93-5b2c-83d5-acac-01b18edf0bf6",
    "url": "https://app.notion.com/p/Video-USA-4b1d8f935b2c83d5acac01b18edf0bf6",
    "pieza": "Video USA",
@@ -1106,6 +2649,80 @@
    "paises": [
     "Ágilbox",
     "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-806e-8b73-f2b876142b70",
+   "url": "https://app.notion.com/p/gilbox-1-41ed8f935b2c806e8b73f2b876142b70",
+   "pieza": "Ágilbox 1",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-801d-9c79-c45fb248656a",
+   "url": "https://app.notion.com/p/GILBOX-DCT-41ed8f935b2c801d9c79c45fb248656a",
+   "pieza": "ÁGILBOX DCT",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Carrusel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "Facebook"
+   ],
+   "paises": [
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-800f-a7a5-da80cd39ef78",
+   "url": "https://app.notion.com/p/GILBOX-DESCUENTOS-41ed8f935b2c800fa7a5da80cd39ef78",
+   "pieza": "ÁGILBOX DESCUENTOS",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "Facebook"
+   ],
+   "paises": [
+    "Ágilbox"
    ],
    "marca": null,
    "servicios": [],
