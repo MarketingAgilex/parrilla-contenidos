@@ -66,6 +66,9 @@ def leer_fuentes(database_id):
         if filas:
             props = filas[0].get("properties", {})
             print("  Columnas: " + ", ".join(f"{k} ({v.get('type')})" for k, v in props.items()), file=sys.stderr)
+            fechas = [next((v for k, v in p.get("properties", {}).items() if v.get("type") == "date"), None) for p in filas]
+            con = [x for x in fechas if x and x.get("date")]
+            print(f"  Filas con fecha: {len(con)} de {len(filas)}. Ejemplo: {json.dumps(con[0] if con else fechas[0], ensure_ascii=False)[:300]}", file=sys.stderr)
         paginas.extend(filas)
     return paginas
 
