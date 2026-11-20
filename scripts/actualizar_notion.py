@@ -127,8 +127,18 @@ def leer_todo():
     )
 
 
+def _clave(texto):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", texto or "")
+    return "".join(c for c in t if not unicodedata.combining(c)).casefold().replace(" ", "").replace("/", "")
+
+
 def valor(pagina, nombre):
-    p = pagina.get("properties", {}).get(nombre)
+    props = pagina.get("properties", {})
+    p = props.get(nombre)
+    if p is None:
+        objetivo = _clave(nombre)
+        p = next((v for k, v in props.items() if _clave(k) == objetivo), None)
     if not p:
         return None
     t = p.get("type")
