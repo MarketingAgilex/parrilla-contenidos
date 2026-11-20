@@ -452,14 +452,16 @@
     setT('k-prox', c((r) => r.proxima)); setT('k-sinf', n - prog);
     setT('k-pctfecha', pct(prog, n), fP.format); setT('k-cumpl', cumpl, fP.format);
 
-    $('h-pill').textContent = '▲ ' + fN.format(prog) + ' programadas' + (n ? ' · ' + fP.format(prog / n) + ' con fecha' : '');
+    $('h-pill').textContent = '✓ ' + fN.format(pub.length) + (pub.length === 1 ? ' publicada' : ' publicadas') + (n ? ' · ' + fP.format(pub.length / n) + ' de la parrilla' : '');
     renderHero(rows);
     const lectura = $('lectura');
     lectura.replaceChildren();
     const b = (t) => el('b', '', t);
-    lectura.append('De ', b(fN.format(n)), ' piezas en la parrilla, ', b(fN.format(prog)), ' tienen fecha de publicación; ',
-      b(fN.format(atr)), atr === 1 ? ' ya pasó su fecha sin marcarse como publicada' : ' ya pasaron su fecha sin marcarse como publicadas',
-      ' y ', b(fN.format(n - prog)), ' esperan en el banco sin programar.');
+    const pendientes = n - pub.length;
+    lectura.append('De ', b(fN.format(n)), ' piezas en la parrilla, ', b(fN.format(pub.length)), pub.length === 1 ? ' ya está publicada' : ' ya están publicadas',
+      ' y ', b(fN.format(pendientes)), pendientes === 1 ? ' sigue en proceso' : ' siguen en proceso');
+    if (prog) lectura.append('; ', b(fN.format(prog)), ' tienen fecha de publicación', atr ? ' y ' : '', ...(atr ? [b(fN.format(atr)), atr === 1 ? ' ya pasó su fecha sin publicarse' : ' ya pasaron su fecha sin publicarse'] : []));
+    lectura.append('.');
 
     // Flujo de producción
     const extra = [...new Set(rows.map((r) => r.estado))].filter((e) => !ORDEN_ESTADOS.includes(e));
