@@ -11,7 +11,7 @@
   :root {
     --indigo: #393a70; --amber: #fcb614; --sky: #2f8fd8; --navy: #393a70; --navy-dd: #1b1c3d; --green: #138a46; --red: #c0392b;
     --st-idea: #9a9cb5; --st-grabar: #7c5cd6; --st-editar: #e0603a; --st-correccion: #2f8fd8;
-    --st-publicar: #f0a500; --st-publicado: #1baf7a; --st-sin: #c2c4d6;
+    --st-pausa: #a0738f; --st-publicar: #f0a500; --st-publicado: #1baf7a; --st-sin: #c2c4d6;
     --bg: #f2f3f8; --panel: #ffffff; --fg: #1c1d3a; --muted: #868aa3; --text2: #4b4d6b; --line: #e4e5ef; --soft: #edeef4; --field: #f7f8fb;
     --shadow: 0 1px 3px rgba(28, 29, 58, .05);
     --radius: 18px;
@@ -326,8 +326,8 @@
 (() => {
   const PAISES = ['Colombia', 'Ecuador', 'México', 'USA'];
   const MARCAS = ['Ágilbox', 'Comerciantex', 'TikTok Jose'];
-  const ORDEN_ESTADOS = ['Idea', 'Por grabar', 'Por editar', 'En corrección', 'Por publicar', 'Publicado', 'Sin estado'];
-  const COLOR_ESTADO = { 'Idea': 'var(--st-idea)', 'Por grabar': 'var(--st-grabar)', 'Por editar': 'var(--st-editar)', 'En corrección': 'var(--st-correccion)', 'Por publicar': 'var(--st-publicar)', 'Publicado': 'var(--st-publicado)', 'Sin estado': 'var(--st-sin)' };
+  const ORDEN_ESTADOS = ['Idea', 'Por grabar', 'Por editar', 'En corrección', 'En pausa', 'Por publicar', 'Publicado', 'Sin estado'];
+  const COLOR_ESTADO = { 'Idea': 'var(--st-idea)', 'Por grabar': 'var(--st-grabar)', 'Por editar': 'var(--st-editar)', 'En corrección': 'var(--st-correccion)', 'En pausa': 'var(--st-pausa)', 'Por publicar': 'var(--st-publicar)', 'Publicado': 'var(--st-publicado)', 'Sin estado': 'var(--st-sin)' };
   const COLOR_DIM = { red: '#393a70', categoria: '#fcb614', formato: '#2f8fd8', marca: '#8e90c4', pais: '#1baf7a', servicio: '#e2729d' };
   const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
   const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
@@ -368,7 +368,7 @@
       paisesN: paises.length ? paises : ['Sin país'], pais: paises.length ? paises.join(', ') : 'Sin país',
       redesTxt: redes.join(', ') || 'Sin red', categoriasTxt: cats.join(', ') || 'Sin categoría',
       mes: fecha ? fecha.slice(0, 7) : 'sin_fecha',
-      atrasada: !!fecha && fecha < hoy && est !== 'Publicado',
+      atrasada: !!fecha && fecha < hoy && est !== 'Publicado' && est !== 'En pausa',
       proxima: !!fecha && fecha >= hoy && fecha <= sumarDias(hoy, 7),
     };
   };
@@ -462,7 +462,8 @@
       ' y ', b(fN.format(n - prog)), ' esperan en el banco sin programar.');
 
     // Flujo de producción
-    const est = ORDEN_ESTADOS.map((e) => ({ label: e, n: c((r) => r.estado === e) })).filter((f) => f.label !== 'Sin estado' || f.n > 0);
+    const extra = [...new Set(rows.map((r) => r.estado))].filter((e) => !ORDEN_ESTADOS.includes(e));
+    const est = [...ORDEN_ESTADOS.slice(0, -1), ...extra, 'Sin estado'].map((e) => ({ label: e, n: c((r) => r.estado === e) })).filter((f) => ORDEN_ESTADOS.slice(0, -1).includes(f.label) || f.n > 0);
     est.total = n;
     barras($('c-estados'), est, (f) => COLOR_ESTADO[f.label]);
 

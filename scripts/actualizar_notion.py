@@ -85,7 +85,7 @@ def diagnostico():
 
 
 def leer_todo():
-    diagnostico()
+    pass
     try:
         return leer_fuentes(DATABASE_ID)
     except urllib.error.HTTPError as e:
