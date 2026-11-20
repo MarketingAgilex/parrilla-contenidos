@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T16:50:06+00:00",
+ "actualizado": "2026-11-20T17:13:38+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -45,6 +45,25 @@
    "paises": [
     "Ágilbox"
    ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-808c-b5c6-df63e10c981b",
+   "url": "https://app.notion.com/p/Buen-fin-MX-41ed8f935b2c808cb5c6df63e10c981b",
+   "pieza": "Buen fin MX",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": null,
+   "categorias": [],
+   "redes": [],
+   "paises": [],
    "marca": null,
    "servicios": [],
    "etapa": null,
@@ -205,110 +224,6 @@
    "servicios": [],
    "etapa": null,
    "tiene_referencia": 0,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-80e8-b47c-f254f5367cad",
-   "url": "https://app.notion.com/p/Ecuador-1-401d8f935b2c80e8b47cf254f5367cad",
-   "pieza": "Ecuador 1",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "Ecuador"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 0,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-8098-aeea-f1dfbef96c19",
-   "url": "https://app.notion.com/p/Ecuador-2-401d8f935b2c8098aeeaf1dfbef96c19",
-   "pieza": "Ecuador 2",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "Ecuador"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 1,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-80d6-9646-d026f31a662e",
-   "url": "https://app.notion.com/p/Ecuador-3-401d8f935b2c80d69646d026f31a662e",
-   "pieza": "Ecuador 3",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "Ecuador"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 1,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-805e-beda-f3b4f1209c48",
-   "url": "https://app.notion.com/p/Ecuador-4-401d8f935b2c805ebedaf3b4f1209c48",
-   "pieza": "Ecuador 4",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "Ecuador"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 1,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
@@ -837,6 +752,32 @@
    "leads": null
   },
   {
+   "id": "41ed8f93-5b2c-803e-a0dc-cb3509357292",
+   "url": "https://app.notion.com/p/Recorrido-Fajarte-41ed8f935b2c803ea0dccb3509357292",
+   "pieza": "Recorrido Fajarte",
+   "fecha": null,
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
    "id": "401d8f93-5b2c-80a1-9f9a-ef05c8cdcdc5",
    "url": "https://app.notion.com/p/Ruta-MX-401d8f935b2c80a19f9aef05c8cdcdc5",
    "pieza": "Ruta MX",
@@ -945,7 +886,7 @@
    "url": "https://app.notion.com/p/Testimonio-cliente-Leidy-409d8f935b2c800e9dbbef54f7422e61",
    "pieza": "Testimonio cliente Leidy",
    "fecha": null,
-   "estado": "Por publicar",
+   "estado": "Publicado",
    "formato": "Reel",
    "categorias": [],
    "redes": [
@@ -1033,84 +974,6 @@
    "servicios": [],
    "etapa": null,
    "tiene_referencia": 1,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-805e-8526-d014a20b35ff",
-   "url": "https://app.notion.com/p/Video-1-MX-401d8f935b2c805e8526d014a20b35ff",
-   "pieza": "Video 1 MX",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "México"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 0,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-80b4-8b03-ea11bf8d19ac",
-   "url": "https://app.notion.com/p/Video-2-MX-401d8f935b2c80b48b03ea11bf8d19ac",
-   "pieza": "Video 2 MX",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "México"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 0,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "401d8f93-5b2c-80a0-b2b6-cfd3e5ab7a48",
-   "url": "https://app.notion.com/p/Video-3-MX-401d8f935b2c80a0b2b6cfd3e5ab7a48",
-   "pieza": "Video 3 MX",
-   "fecha": null,
-   "estado": "Por publicar",
-   "formato": "Reel",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "Facebook",
-    "YouTube"
-   ],
-   "paises": [
-    "México"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 0,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
@@ -1217,6 +1080,32 @@
    ],
    "paises": [
     "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80f3-9988-e264a89821fd",
+   "url": "https://app.notion.com/p/Video-gilbox-2-41ed8f935b2c80f39988e264a89821fd",
+   "pieza": "Video Ágilbox 2",
+   "fecha": null,
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube"
+   ],
+   "paises": [
+    "Ágilbox",
+    "Colombia"
    ],
    "marca": null,
    "servicios": [],
