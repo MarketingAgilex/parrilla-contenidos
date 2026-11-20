@@ -14,7 +14,7 @@ import urllib.error
 import urllib.request
 
 TOKEN = os.environ.get("NOTION_TOKEN", "").strip()
-DATABASE_ID = os.environ.get("NOTION_DATABASE_ID", "1a67e73023f4836cbf76819d122b1863").strip()
+DATABASE_ID = os.environ.get("NOTION_DATABASE_ID", "908d8f935b2c833aa436011b3d10e8c0").strip()
 DATA_SOURCE_ID = os.environ.get("NOTION_DATA_SOURCE_ID", "8fd7e730-23f4-8356-8a72-87349b91cf22").strip()
 SALIDA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data.json")
 
@@ -34,8 +34,57 @@ def post(url, body, version):
         return json.load(resp)
 
 
+def get(url, version):
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {TOKEN}", "Notion-Version": version})
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return json.load(resp)
+
+
+def paginar(url, version):
+    paginas, cursor = [], None
+    while True:
+        body = {"page_size": 100}
+        if cursor:
+            body["start_cursor"] = cursor
+        res = post(url, body, version)
+        paginas.extend(res.get("results", []))
+        if not res.get("has_more"):
+            return paginas
+        cursor = res.get("next_cursor")
+
+
+def leer_fuentes(database_id):
+    """Lee todas las fuentes de datos (pestañas) de la base y las une."""
+    db = get(f"https://api.notion.com/v1/databases/{database_id}", "2025-09-03")
+    fuentes = db.get("data_sources", [])
+    print(f"Base {database_id}: última edición {db.get('last_edited_time')}; fuentes: " + ", ".join(f"{f.get('name')} ({f.get('id')})" for f in fuentes), file=sys.stderr)
+    paginas = []
+    for f in fuentes:
+        filas = paginar(f"https://api.notion.com/v1/data_sources/{f['id']}/query", "2025-09-03")
+        ult = max((p.get("last_edited_time", "") for p in filas), default="")
+        print(f"  Fuente '{f.get('name')}': {len(filas)} filas, última fila editada {ult}", file=sys.stderr)
+        paginas.extend(filas)
+    return paginas
+
+
+def diagnostico():
+    try:
+        res = post("https://api.notion.com/v1/search", {"page_size": 50, "sort": {"direction": "descending", "timestamp": "last_edited_time"}}, "2025-09-03")
+        for o in res.get("results", [])[:20]:
+            t = o.get("title") or (o.get("properties", {}).get("title", {}) or {}).get("title") or []
+            nombre = "".join(x.get("plain_text", "") for x in t) if isinstance(t, list) else str(t)
+            print(f"  Visible: [{o.get('object')}] {nombre} · editado {o.get('last_edited_time')} · {o.get('id')}", file=sys.stderr)
+    except urllib.error.HTTPError as e:
+        print(f"Diagnóstico falló: {e.code}", file=sys.stderr)
+
+
 def leer_todo():
-    # Busca por nombre las bases que la conexión puede ver (no depende del identificador).
+    diagnostico()
+    try:
+        return leer_fuentes(DATABASE_ID)
+    except urllib.error.HTTPError as e:
+        print(f"Lectura por fuentes falló: {e.code} {e.read().decode('utf-8', 'replace')[:300]}", file=sys.stderr)
+    # Respaldo: busca por nombre las bases que la conexión puede ver.
     intentos = []
     try:
         res = post("https://api.notion.com/v1/search", {"query": "PARRILLA", "filter": {"property": "object", "value": "database"}, "page_size": 50}, "2022-06-28")
