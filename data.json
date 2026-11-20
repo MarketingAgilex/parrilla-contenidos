@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T18:10:07+00:00",
+ "actualizado": "2026-11-20T23:56:07+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -16,6 +16,30 @@
     "Instagram",
     "Facebook",
     "TikTok"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80e1-8406-e51030893edf",
+   "url": "https://app.notion.com/p/GTA-VI-41ed8f935b2c80e18406e51030893edf",
+   "pieza": "GTA VI",
+   "fecha": "2026-11-21",
+   "estado": "Programado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "TikTok",
+    "YouTube"
    ],
    "paises": [
     "Colombia"
@@ -1038,7 +1062,7 @@
    "pieza": "Cristina Warner 1",
    "fecha": null,
    "estado": "Por publicar",
-   "formato": null,
+   "formato": "Reel",
    "categorias": [],
    "redes": [],
    "paises": [
@@ -1059,7 +1083,7 @@
    "pieza": "Cristina Warner 2",
    "fecha": null,
    "estado": "Por publicar",
-   "formato": null,
+   "formato": "Reel",
    "categorias": [],
    "redes": [],
    "paises": [
@@ -1080,7 +1104,7 @@
    "pieza": "Cristina Warner 3",
    "fecha": null,
    "estado": "Por publicar",
-   "formato": null,
+   "formato": "Reel",
    "categorias": [],
    "redes": [],
    "paises": [
