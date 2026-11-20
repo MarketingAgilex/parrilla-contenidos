@@ -63,6 +63,9 @@ def leer_fuentes(database_id):
         filas = paginar(f"https://api.notion.com/v1/data_sources/{f['id']}/query", "2025-09-03")
         ult = max((p.get("last_edited_time", "") for p in filas), default="")
         print(f"  Fuente '{f.get('name')}': {len(filas)} filas, última fila editada {ult}", file=sys.stderr)
+        if filas:
+            props = filas[0].get("properties", {})
+            print("  Columnas: " + ", ".join(f"{k} ({v.get('type')})" for k, v in props.items()), file=sys.stderr)
         paginas.extend(filas)
     return paginas
 
