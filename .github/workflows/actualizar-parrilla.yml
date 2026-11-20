@@ -2,7 +2,7 @@ name: Actualizar parrilla desde Notion
 
 on:
   schedule:
-    - cron: "17 * * * *"   # cada hora (UTC), al minuto 17
+    - cron: "*/10 * * * *"   # cada 10 minutos
   workflow_dispatch:        # botón "Run workflow" para actualizar a mano
 
 permissions:
