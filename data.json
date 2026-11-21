@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T17:59:05+00:00",
+ "actualizado": "2026-11-21T18:01:07+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -493,7 +493,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -519,7 +522,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -650,7 +656,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -702,7 +711,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -728,7 +740,9 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -783,7 +797,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Carrusel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1109,7 +1126,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Carrusel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1135,7 +1155,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1256,7 +1279,9 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Conexión"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1593,7 +1618,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Entretenido",
+    "Conexión"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1619,7 +1647,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Entretenido",
+    "Conexión"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1645,7 +1676,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Entretenido",
+    "Conexión"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1671,7 +1705,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Entretenido",
+    "Conexión"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1697,7 +1734,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Entretenido",
+    "Conexión"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1723,7 +1763,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1857,7 +1900,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Carrusel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1987,7 +2033,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2117,7 +2166,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Testimonio",
+    "Storytelling"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2227,7 +2279,9 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Testimonio"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2253,7 +2307,9 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo"
+   ],
    "redes": [
     "Tiktok Jose"
    ],
@@ -2276,7 +2332,9 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo"
+   ],
    "redes": [
     "TikTok"
    ],
@@ -2328,7 +2386,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Entretenido",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "Facebook",
@@ -2751,7 +2812,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
