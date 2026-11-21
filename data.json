@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T18:01:07+00:00",
+ "actualizado": "2026-11-21T18:03:09+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -65,7 +65,10 @@
    "fecha": "2026-11-20",
    "estado": "Publicado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -146,7 +149,10 @@
    "fecha": "2026-11-24",
    "estado": "Programado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -172,7 +178,10 @@
    "fecha": "2026-11-24",
    "estado": "Programado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -198,7 +207,10 @@
    "fecha": "2026-11-24",
    "estado": "Programado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -282,7 +294,9 @@
    "fecha": "2026-11-27",
    "estado": "Programado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Conexión"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -308,7 +322,10 @@
    "fecha": "2026-11-30",
    "estado": "Programado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Conexión",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -334,7 +351,10 @@
    "fecha": "2026-12-01",
    "estado": "Programado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Conexión",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -390,7 +410,10 @@
    "fecha": "2026-12-04",
    "estado": "Programado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Conexión",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -417,7 +440,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -443,7 +469,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -468,7 +497,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -551,7 +583,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -577,7 +612,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -603,7 +641,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -629,7 +670,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -685,7 +729,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -826,7 +873,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -851,7 +901,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -876,7 +929,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -901,7 +957,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -926,7 +985,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -951,7 +1013,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -976,7 +1041,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1001,7 +1069,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1026,7 +1097,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1051,7 +1125,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1076,7 +1153,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1101,7 +1181,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1253,7 +1336,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1364,7 +1450,9 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Testimonio"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1792,7 +1880,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1848,7 +1939,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Conexión",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1874,7 +1968,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1929,7 +2026,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1955,7 +2055,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -1981,7 +2084,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2007,7 +2113,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2062,7 +2171,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2088,7 +2200,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2114,7 +2229,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2140,7 +2258,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2252,7 +2373,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Conexión",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2473,7 +2597,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2499,7 +2626,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2525,7 +2655,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2551,7 +2684,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2577,7 +2713,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2603,7 +2742,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2629,7 +2771,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2655,7 +2800,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2681,7 +2829,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2707,7 +2858,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2733,7 +2887,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2759,7 +2916,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2841,7 +3001,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Reel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "TikTok",
@@ -2867,7 +3030,10 @@
    "fecha": null,
    "estado": "Publicado",
    "formato": "Carrusel",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "Facebook"
@@ -2891,7 +3057,10 @@
    "fecha": null,
    "estado": "Por publicar",
    "formato": "Imagen",
-   "categorias": [],
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
    "redes": [
     "Instagram",
     "Facebook"
