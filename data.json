@@ -1,16 +1,43 @@
 {
- "actualizado": "2026-11-20T23:56:07+00:00",
+ "actualizado": "2026-11-21T00:27:01+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
-   "id": "3e3d8f93-5b2c-80cd-b20c-c320058e7c74",
-   "url": "https://app.notion.com/p/Gremio-Textiles-3e3d8f935b2c80cdb20cc320058e7c74",
+   "id": "41fd8f93-5b2c-80ce-8337-f8640d7601df",
+   "url": "https://app.notion.com/p/Entretenido-MX-41fd8f935b2c80ce8337f8640d7601df",
+   "pieza": "Entretenido MX",
+   "fecha": "2026-11-20",
+   "estado": "Publicado",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "3e6d8f93-5b2c-801f-a2a8-fc115bbc1c8c",
+   "url": "https://app.notion.com/p/Gremio-Textiles-3e6d8f935b2c801fa2a8fc115bbc1c8c",
    "pieza": "Gremio - Textiles",
    "fecha": "2026-11-20",
-   "estado": "Programado",
-   "formato": "Imagen",
+   "estado": "Publicado",
+   "formato": "Carrusel",
    "categorias": [
-    "Venta"
+    "Venta",
+    "Informativo"
    ],
    "redes": [
     "Instagram",
@@ -24,6 +51,32 @@
    "servicios": [],
    "etapa": null,
    "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41ed8f93-5b2c-80a0-92b1-eec23f23f034",
+   "url": "https://app.notion.com/p/Pymes-EC-2-41ed8f935b2c80a092b1eec23f23f034",
+   "pieza": "Pymes EC 2",
+   "fecha": "2026-11-20",
+   "estado": "Publicado",
+   "formato": "Imagen",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "LinkedIn",
+    "Facebook"
+   ],
+   "paises": [
+    "México"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 1,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
@@ -1424,15 +1477,14 @@
    "leads": null
   },
   {
-   "id": "3e6d8f93-5b2c-801f-a2a8-fc115bbc1c8c",
-   "url": "https://app.notion.com/p/Gremio-Textiles-3e6d8f935b2c801fa2a8fc115bbc1c8c",
+   "id": "3e3d8f93-5b2c-80cd-b20c-c320058e7c74",
+   "url": "https://app.notion.com/p/Gremio-Textiles-3e3d8f935b2c80cdb20cc320058e7c74",
    "pieza": "Gremio - Textiles",
    "fecha": null,
    "estado": "Por publicar",
-   "formato": "Carrusel",
+   "formato": "Imagen",
    "categorias": [
-    "Venta",
-    "Informativo"
+    "Venta"
    ],
    "redes": [
     "Instagram",
@@ -1777,32 +1829,6 @@
    "pieza": "Pymes EC 1",
    "fecha": null,
    "estado": "Publicado",
-   "formato": "Imagen",
-   "categorias": [],
-   "redes": [
-    "Instagram",
-    "TikTok",
-    "LinkedIn",
-    "Facebook"
-   ],
-   "paises": [
-    "México"
-   ],
-   "marca": null,
-   "servicios": [],
-   "etapa": null,
-   "tiene_referencia": 1,
-   "tiene_link": 0,
-   "alcance": null,
-   "interacciones": null,
-   "leads": null
-  },
-  {
-   "id": "41ed8f93-5b2c-80a0-92b1-eec23f23f034",
-   "url": "https://app.notion.com/p/Pymes-EC-2-41ed8f935b2c80a092b1eec23f23f034",
-   "pieza": "Pymes EC 2",
-   "fecha": null,
-   "estado": "Por publicar",
    "formato": "Imagen",
    "categorias": [],
    "redes": [
