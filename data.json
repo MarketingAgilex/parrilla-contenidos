@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T00:29:32+00:00",
+ "actualizado": "2026-11-21T00:33:35+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -231,6 +231,33 @@
    "servicios": [],
    "etapa": null,
    "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "41fd8f93-5b2c-8038-bb58-c937886850f7",
+   "url": "https://app.notion.com/p/Thanksgiving-41fd8f935b2c8038bb58c937886850f7",
+   "pieza": "Thanksgiving",
+   "fecha": "2026-11-26",
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "YouTube",
+    "Facebook",
+    "LinkedIn"
+   ],
+   "paises": [
+    "USA"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
