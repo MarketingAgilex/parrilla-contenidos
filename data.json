@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T18:17:15+00:00",
+ "actualizado": "2026-11-23T18:40:27+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -103,6 +103,32 @@
    ],
    "paises": [
     "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "421d8f93-5b2c-8043-9ea3-e11f33531aed",
+   "url": "https://app.notion.com/p/Jose-ruta-CR-421d8f935b2c80439ea3e11f33531aed",
+   "pieza": "Jose ruta CR",
+   "fecha": "2026-11-23",
+   "estado": "Programado",
+   "formato": "Reel",
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
+   "redes": [
+    "Tiktok Jose"
+   ],
+   "paises": [
+    "TikTok Jose"
    ],
    "marca": null,
    "servicios": [],
@@ -331,6 +357,31 @@
     "TikTok",
     "YouTube",
     "Facebook"
+   ],
+   "paises": [
+    "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "421d8f93-5b2c-801b-8e87-de66d4925287",
+   "url": "https://app.notion.com/p/IA-Grinch-421d8f935b2c801b8e87de66d4925287",
+   "pieza": "IA Grinch",
+   "fecha": "2026-12-01",
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [
+    "Entretenido"
+   ],
+   "redes": [
+    "TikTok"
    ],
    "paises": [
     "Colombia"
