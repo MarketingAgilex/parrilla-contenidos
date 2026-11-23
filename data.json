@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T21:50:06+00:00",
+ "actualizado": "2026-11-23T21:52:09+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -145,15 +145,21 @@
    "pieza": "Jose Ágilbox",
    "fecha": "2026-11-23",
    "estado": "Por publicar",
-   "formato": null,
+   "formato": "Reel",
    "categorias": [
     "Informativo",
     "Venta"
    ],
    "redes": [
-    "Tiktok Jose"
+    "Tiktok Jose",
+    "Instagram",
+    "YouTube",
+    "Facebook"
    ],
-   "paises": [],
+   "paises": [
+    "TikTok Jose",
+    "Colombia"
+   ],
    "marca": null,
    "servicios": [],
    "etapa": null,
