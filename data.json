@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T18:52:34+00:00",
+ "actualizado": "2026-11-23T21:50:06+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -140,12 +140,12 @@
    "leads": null
   },
   {
-   "id": "421d8f93-5b2c-8043-9ea3-e11f33531aed",
-   "url": "https://app.notion.com/p/Jose-ruta-CR-421d8f935b2c80439ea3e11f33531aed",
-   "pieza": "Jose ruta CR",
+   "id": "421d8f93-5b2c-809a-a638-f7c200fc3fab",
+   "url": "https://app.notion.com/p/Jose-gilbox-421d8f935b2c809aa638f7c200fc3fab",
+   "pieza": "Jose Ágilbox",
    "fecha": "2026-11-23",
-   "estado": "Programado",
-   "formato": "Reel",
+   "estado": "Por publicar",
+   "formato": null,
    "categorias": [
     "Informativo",
     "Venta"
@@ -153,9 +153,7 @@
    "redes": [
     "Tiktok Jose"
    ],
-   "paises": [
-    "TikTok Jose"
-   ],
+   "paises": [],
    "marca": null,
    "servicios": [],
    "etapa": null,
@@ -357,6 +355,32 @@
    ],
    "paises": [
     "Colombia"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "421d8f93-5b2c-8043-9ea3-e11f33531aed",
+   "url": "https://app.notion.com/p/Jose-ruta-CR-421d8f935b2c80439ea3e11f33531aed",
+   "pieza": "Jose ruta CR",
+   "fecha": "2026-11-30",
+   "estado": "Por publicar",
+   "formato": "Reel",
+   "categorias": [
+    "Informativo",
+    "Venta"
+   ],
+   "redes": [
+    "Tiktok Jose"
+   ],
+   "paises": [
+    "TikTok Jose"
    ],
    "marca": null,
    "servicios": [],
