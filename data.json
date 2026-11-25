@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-25T00:35:23+00:00",
+ "actualizado": "2026-11-25T00:55:34+00:00",
  "fuente": "Notion · PARRILLA DE CONTENIDOS ÁGILEX",
  "piezas": [
   {
@@ -193,6 +193,35 @@
    "servicios": [],
    "etapa": null,
    "tiene_referencia": 1,
+   "tiene_link": 0,
+   "alcance": null,
+   "interacciones": null,
+   "leads": null
+  },
+  {
+   "id": "423d8f93-5b2c-80a1-9f4d-f3a7cb701439",
+   "url": "https://app.notion.com/p/Carrusel-thanksgiving-423d8f935b2c80a19f4df3a7cb701439",
+   "pieza": "Carrusel thanksgiving",
+   "fecha": "2026-11-24",
+   "estado": "Publicado",
+   "formato": "Carrusel",
+   "categorias": [
+    "Conexión",
+    "Informativo"
+   ],
+   "redes": [
+    "Instagram",
+    "TikTok",
+    "Facebook"
+   ],
+   "paises": [
+    "USA",
+    "Ágilbox"
+   ],
+   "marca": null,
+   "servicios": [],
+   "etapa": null,
+   "tiene_referencia": 0,
    "tiene_link": 0,
    "alcance": null,
    "interacciones": null,
